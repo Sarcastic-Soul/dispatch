@@ -13,9 +13,9 @@ export interface PolicyInput {
 
 /**
  * When does a ticket need the cloud?
- * - no examples yet: the on-device model alone was 36% accurate in our test, so every ticket is checked;
+ * - no examples yet: the on-device model alone was 39% accurate in our test, so every ticket is checked;
  * - the on-device answer disagrees with the teams of the most similar past tickets
- *   (in our test this caught 87% of on-device errors);
+ *   (with 120 examples this caught 81% of on-device errors in our test);
  * - otherwise a small random sample, so accuracy keeps being measured.
  */
 export function decide({

@@ -99,8 +99,8 @@ export function Learning({ state }: { state: DeskState }) {
             <small>tickets never left the browser</small>
           </h2>
           <p className="lead">
-            Every ticket a person confirms is saved, masked, as an example for this desk. The on-device model gets better and
-            fewer tickets need the cloud.
+            Every ticket a person confirms is saved, masked, as an example for this desk. With more examples, the on-device
+            answer and the similar past tickets agree more often, so fewer tickets need the cloud.
           </p>
           <div className="facts">
             <div>

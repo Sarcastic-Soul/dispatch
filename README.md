@@ -52,7 +52,24 @@ measured offline.
 
 ## What we measured
 
-<!-- MEASURED -->
+On 80 held-out synthetic tickets, using the app's own prompts and masking (full write-up, raw results and how to
+re-run them: [`eval/RESULTS.md`](eval/RESULTS.md)):
+
+| Past tickets on the desk | 20 | 60 | 120 |
+|---|---|---|---|
+| Tickets that never left the browser | 14% | 25% | 40% |
+| Accuracy, hybrid (on device, Gemini only when unsure) | 68% | 68% | 80% |
+| Accuracy, Gemini on every ticket | 69% | 75% | 85% |
+| Accuracy, on-device model alone | 51% | 50% | 55% |
+
+- The share of tickets kept on the computer grows as the desk learns. With 120 examples, 4 in 10 tickets never
+  leave the browser, for a cost of 5 points of accuracy against sending every ticket to Gemini.
+- The unsure check (the on-device answer against the vote of the similar past tickets) catches 81% of the
+  on-device model's mistakes at 120 examples.
+- Gemini gets better with the desk's examples too (69% to 85%): they teach it local rules it cannot know.
+- On the dev laptop the on-device model runs on the CPU, about 7 s per ticket. Gemini 3.5 Flash-Lite answers in
+  about 1.5 s (median).
+- An earlier draft overstated the hybrid accuracy at 20 and 60 examples; `eval/RESULTS.md` explains the mistake.
 
 ## Try it
 

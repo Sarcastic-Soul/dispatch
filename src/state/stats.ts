@@ -8,16 +8,16 @@ export const MEASURED = {
   tickets: 80,
   kept: [
     { bank: 20, share: 0.14 },
-    { bank: 60, share: 0.3 },
-    { bank: 120, share: 0.39 },
+    { bank: 60, share: 0.25 },
+    { bank: 120, share: 0.4 },
   ],
   deviceAcc: [
-    { bank: 0, acc: 0.36 },
-    { bank: 20, acc: 0.49 },
-    { bank: 60, acc: 0.52 },
-    { bank: 120, acc: 0.62 },
+    { bank: 0, acc: 0.39 },
+    { bank: 20, acc: 0.51 },
+    { bank: 60, acc: 0.5 },
+    { bank: 120, acc: 0.55 },
   ],
-  hybrid: { bank: 120, acc: 0.84, allCloudAcc: 0.84, keptAcc: 0.87 },
+  hybrid: { bank: 120, acc: 0.8, allCloudAcc: 0.85, keptAcc: 0.78 },
 };
 
 export const lastKept = MEASURED.kept[MEASURED.kept.length - 1];

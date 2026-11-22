@@ -29,7 +29,8 @@ by = defaultdict(list)
 for r in items.values():
     by[(r["mode"], r["n"])].append(r)
 
-print(f"{'mode':7} {'n':>4} {'items':>5} {'model acc':>10} {'95% CI':>13} {'kNN acc':>8} {'rule-based acc':>15} {'avg ms':>7}")
+W = max([7] + [len(m) for m, _ in by])
+print(f"{'mode':{W}} {'n':>4} {'items':>5} {'model acc':>10} {'95% CI':>13} {'kNN acc':>8} {'local-rule acc':>15} {'avg ms':>7}")
 for (mode, n), rs in sorted(by.items(), key=lambda x: (x[0][0], x[0][1])):
     k = sum(r["pred"] == r["gold"] for r in rs)
     lo, hi = wilson(k, len(rs))
@@ -38,7 +39,7 @@ for (mode, n), rs in sorted(by.items(), key=lambda x: (x[0][0], x[0][1])):
     rb = [r for r in rs if r.get("rule")]
     rb_acc = f"{100 * sum(r['pred'] == r['gold'] for r in rb) / len(rb):.0f}% ({len(rb)})" if rb else "-"
     ms = sum(r["ms"] for r in rs) / len(rs)
-    print(f"{mode:7} {n:>4} {len(rs):>5} {100 * k / len(rs):>9.0f}% {100 * lo:>5.0f}-{100 * hi:<5.0f}% {knn_acc:>8} {rb_acc:>15} {ms:>7.0f}")
+    print(f"{mode:{W}} {n:>4} {len(rs):>5} {100 * k / len(rs):>9.0f}% {f'{100 * lo:.0f}-{100 * hi:.0f}%':>13} {knn_acc:>8} {rb_acc:>15} {ms:>7.0f}")
 
 # "Unsure" signal: model disagrees with the kNN vote. How well does it catch model errors?
 print("\nUnsure signal (model label != kNN vote):")
