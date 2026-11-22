@@ -131,6 +131,7 @@ Requirements: Node 22 or newer, a Firebase project, desktop Chrome with the buil
 - `src/core/`: masking, retrieval, prompts, unsure policy, Firebase AI Logic calls, Firestore, Remote Config.
 - `src/state/desk.ts`: the queue and routing loop. `src/components/`: the UI.
 - `eval/`: synthetic data, the measurement harness and raw results (`eval/RESULTS.md`).
-- `design-options/`: the three design directions considered before building.
+- `e2e/`, `scripts/shots.mjs`: Playwright checks with a fake on-device model. `scripts/drive.mjs`: drive a
+  Chrome with the real built-in model over the DevTools protocol.
 
 Apache 2.0, see `LICENSE`.

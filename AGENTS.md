@@ -18,7 +18,8 @@ tickets marked unsure, only on masked text, and only after the staffer approves.
 - `src/components/`: React UI ("Campus memo" design: Fraunces + Manrope, cream and green, Phosphor icons).
 - `eval/`: the offline measurement. `eval/data` is synthetic; `eval/results/*.jsonl` are raw runs;
   `eval/RESULTS.md` is the write-up. Numbers in `src/state/stats.ts` (MEASURED) must match RESULTS.md.
-- `scripts/drive.mjs`, `scripts/open-tab.mjs`: drive the debuggable Chrome Beta over CDP (port 9333).
+- `scripts/drive.mjs`: drive the debuggable Chrome Beta over CDP (port 9333). `scripts/shots.mjs`: screenshots
+  with a fake on-device model.
 
 ## Commands
 
