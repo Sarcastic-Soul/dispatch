@@ -92,9 +92,9 @@ function DeviceAnswer({ t }: { t: QueueTicket }) {
       </p>
       {tr.knn && (
         <p className="warn" style={{ marginTop: 12 }}>
-          <WarningDiamond className="ic" aria-hidden />
+          {tr.device.team === tr.knn ? <CheckCircle className="ic" aria-hidden /> : <WarningDiamond className="ic" aria-hidden />}
           <span>
-            Similar past tickets say <b>{teamName(tr.knn)}</b> ({agree} of {tr.examples.length}).{' '}
+            Similar past tickets say <b>{teamName(tr.knn)}</b> ({agree} of {tr.examples.length}, the closest count most).{' '}
             {tr.device.team === tr.knn ? 'They agree.' : 'The two disagree.'}
           </span>
         </p>
