@@ -6,7 +6,7 @@ unsure, and learns from every decision a person makes.**
 Built for #BuildHybridAI 2026 with Firebase AI Logic hybrid inference (web, Chrome).
 
 - Live demo: https://dispatch-hybridai-2026.web.app (desktop Chrome)
-- Video (3 min): _link added at upload_
+- Video (2 min): https://youtu.be/3fjG5BC-nR8
 
 ## The problem
 
