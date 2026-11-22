@@ -1,0 +1,4 @@
+[{"id":"print-services","name":"Print Services","description":"Handles campus printers and copiers."},
+ {"id":"lab-desktop-east","name":"Lab Desktop East","description":"Supports computer lab desktops in east campus buildings."},
+ {"id":"identity-access","name":"Identity & Access","description":"Manages accounts, passwords and sign-in."},
+ {"id":"service-desk-t1","name":"Service Desk Tier 1","description":"General first-line IT help."}]

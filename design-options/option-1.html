@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dispatch · Option 1 · Mailroom</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<style>
+:root{
+  --paper:#F2EFE9; --paper-2:#E8E4DB; --paper-3:#DCD7CB;
+  --ink:#26231F; --ink-2:#5A544B; --line:#CBC5B8; --line-strong:#A9A294;
+  --accent:#F25C1B; --accent-deep:#B53A06;
+  --sans:"IBM Plex Sans",ui-sans-serif,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font:400 15px/1.45 var(--sans)}
+ul,ol{list-style:none;padding:0}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+i.ph{font-size:16px;flex:none}
+
+/* header */
+.top{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 28px;border-bottom:2px solid var(--ink)}
+.brand{display:flex;align-items:center;gap:14px}
+.stamp{display:grid;place-items:center;width:40px;height:40px;background:var(--accent);color:var(--ink)}
+.stamp i{font-size:24px}
+.brand h1{font:600 22px/1.1 var(--sans);letter-spacing:-.01em}
+.brand p{color:var(--ink-2);font-size:13px;margin-top:2px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.chip{display:inline-flex;align-items:center;gap:7px;font:400 12px/1.2 var(--mono);padding:7px 10px;border:1px solid var(--line-strong);color:var(--ink)}
+.chip.ok i{color:var(--accent-deep)}
+.chip .dot{width:7px;height:7px;background:var(--accent);flex:none}
+
+/* rack */
+.rack{display:grid;grid-template-columns:392px minmax(0,1fr) 296px;align-items:stretch}
+.queue{border-right:1px solid var(--line-strong);min-width:0}
+.col-h{display:flex;align-items:baseline;justify-content:space-between;padding:16px 20px 10px}
+.col-h h2{font:600 13px/1.2 var(--sans);text-transform:uppercase;letter-spacing:.08em}
+.col-h span{font:400 12px var(--mono);color:var(--ink-2)}
+.tabs{display:flex;gap:0;padding:0 20px 12px;font:400 12px var(--mono);flex-wrap:wrap}
+.tabs button{background:none;border:1px solid var(--line-strong);padding:6px 10px;min-height:32px;margin-right:-1px}
+.tabs button[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.row{display:grid;grid-template-columns:48px 1fr;gap:2px 8px;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:12px 20px 12px 17px;border-left:3px solid transparent;min-height:44px}
+.row:hover{background:var(--paper-2)}
+.row[aria-current=true]{background:var(--paper-2);border-left-color:var(--accent)}
+.row time{font:400 12px/1.6 var(--mono);color:var(--ink-2);padding-top:1px}
+.snip{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:500;line-height:1.35}
+.meta{grid-column:2;display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;margin-top:4px}
+.team{font:400 12px var(--mono);overflow-wrap:anywhere}
+.st{display:inline-flex;align-items:center;gap:5px;font:400 12px/1.3 var(--mono);color:var(--ink-2)}
+.st-unsure{background:var(--accent);color:var(--ink);padding:2px 7px 2px 5px;font-weight:500}
+.st-cloud{color:var(--ink)}
+.st-route i{animation:spin 1.4s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* review */
+.review{padding:20px 28px 28px;min-width:0}
+.sheet{background:var(--paper-2);border:1px solid var(--line-strong);position:relative}
+.stub{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;padding:18px 24px 20px;border-bottom:2px dashed var(--line-strong);position:relative}
+.stub::before,.stub::after{content:"";position:absolute;bottom:-10px;width:18px;height:18px;border-radius:50%;background:var(--paper);border:1px solid var(--line-strong)}
+.stub::before{left:-10px}.stub::after{right:-10px}
+.stub .st{white-space:nowrap}
+.stub .no{font:400 12px var(--mono);color:var(--ink-2);margin-bottom:6px}
+.stub h2{font:500 20px/1.3 var(--sans);letter-spacing:-.005em;max-width:46ch}
+.steps{padding:6px 24px 4px}
+.step{display:grid;grid-template-columns:30px minmax(0,1fr);gap:14px;padding:18px 0;border-top:1px solid var(--line)}
+.step:first-child{border-top:0}
+.step .n{width:24px;height:24px;display:grid;place-items:center;font:500 12px var(--mono);background:var(--ink);color:var(--paper)}
+.step h3{font:600 14px/1.3 var(--sans);margin:2px 0 8px}
+.ans{display:flex;gap:10px;align-items:center;font:500 20px/1.3 var(--mono);overflow-wrap:anywhere}
+.ans i{font-size:20px}
+.say{margin-top:10px;display:flex;gap:8px;align-items:flex-start;color:var(--ink)}
+.say i{color:var(--accent-deep);margin-top:2px}
+.say b{font-family:var(--mono);font-weight:500}
+.masked{font:400 14px/1.6 var(--mono);background:var(--paper-3);padding:12px 14px;border-left:3px solid var(--ink);overflow-wrap:anywhere}
+mark{background:var(--accent);color:var(--ink);padding:1px 4px;font-weight:500}
+.note{display:flex;gap:8px;align-items:flex-start;margin-top:10px;font-size:13px;color:var(--ink-2)}
+.note i{margin-top:2px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 16px;font:500 14px var(--sans);border:1px solid var(--ink);background:none;transition:background .15s}
+.btn:hover{background:var(--paper-3)}
+.btn.pri{background:var(--accent);border-color:var(--ink)}
+.btn.pri:hover{background:#FF7436}
+.btn:active{transform:translateY(1px)}
+.reason{font-size:16px;line-height:1.45}
+.reason b{font-weight:600}
+.src{font:400 12px var(--mono);color:var(--ink-2);margin-top:6px}
+.saved{display:flex;gap:8px;align-items:center;margin-top:14px;padding:10px 12px;background:var(--paper-3);font:500 13px var(--mono)}
+.saved i{color:var(--accent-deep);font-size:18px}
+
+/* pigeonholes */
+.holes{border-left:1px solid var(--line-strong);min-width:0;padding-bottom:20px}
+.holes .col-h{padding-bottom:4px}
+.holes>p{padding:0 20px 12px;font-size:13px;color:var(--ink-2)}
+.rackbox{margin:0 20px;border:2px solid var(--ink)}
+.hole{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:2px 8px;padding:8px 12px 9px;border-top:1px solid var(--line-strong);position:relative;background:var(--paper)}
+.hole:first-child{border-top:0}
+.hole .nm{font:400 12.5px var(--mono);overflow-wrap:anywhere}
+.hole b{font:600 20px/1 var(--sans);font-variant-numeric:tabular-nums}
+.hole .bar{grid-column:1/-1;height:4px;background:var(--paper-3)}
+.hole .bar i{display:block;height:100%;background:var(--ink)}
+.hole.flag{background:var(--paper-2)}
+.hole.flag .bar i{background:var(--accent)}
+.hole .tag{grid-column:1/-1;font:400 11px var(--mono);color:var(--accent-deep);margin-top:-2px}
+
+/* learning */
+.learn{background:var(--paper-2);border-top:2px solid var(--ink);display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1fr) minmax(0,1.1fr);gap:0}
+.learn>*{padding:24px 28px;min-width:0}
+.learn>*+*{border-left:1px solid var(--line-strong)}
+.learn h2{font:600 34px/1.05 var(--sans);letter-spacing:-.025em}
+.learn h2 em{font-style:normal;background:var(--accent);padding:0 8px;margin-right:2px;display:inline-block}
+.learn .lead{margin-top:12px;max-width:34ch}
+.facts{display:grid;gap:14px;align-content:start}
+.facts h3{font:600 13px var(--sans);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.trio div{background:var(--paper);padding:8px 10px}
+.trio b{display:block;font:600 24px/1.1 var(--sans);font-variant-numeric:tabular-nums}
+.trio span{font:400 12px var(--mono);color:var(--ink-2)}
+.pair{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.pair b{font:600 24px/1.1 var(--sans)}
+.pair span{color:var(--ink-2);font-size:14px}
+.fig{display:flex;flex-direction:column;gap:8px}
+.chart{width:100%;height:auto;display:block;overflow:visible}
+.chart text{font-family:var(--mono);font-size:10.5px;fill:var(--ink-2)}
+.chart .grid line{stroke:var(--line);stroke-width:1}.chart .grid .base{stroke:var(--ink)}
+.chart .sys{stroke:var(--ink);stroke-width:1.5;stroke-dasharray:5 4}
+.chart .sysl,.chart .accl,.chart .keptl{fill:var(--ink)}
+.chart .keptl{font-weight:500}
+.chart .acc{stroke:var(--ink);stroke-width:2;fill:var(--ink)}
+.chart polyline{fill:none}
+.chart .kept{stroke:var(--accent);stroke-width:3}
+.chart circle.kept{fill:var(--accent)}
+.chart polyline.kept,.chart polyline.acc{fill:none}
+.chart .dot.kept{stroke:var(--ink);stroke-width:1.5}
+.chart .val{fill:var(--ink);font-weight:500;font-size:10px}
+figcaption{font:400 12px var(--mono);color:var(--ink-2)}
+
+@media (max-width:1180px){
+  .rack{grid-template-columns:340px minmax(0,1fr)}
+  .holes{grid-column:1/-1;border-left:0;border-top:1px solid var(--line-strong)}
+  .rackbox{display:grid;grid-template-columns:repeat(3,1fr)}
+  .hole{border-top:0;border-left:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong)}
+  .learn{grid-template-columns:1fr 1fr}
+  .learn .fig{grid-column:1/-1;border-left:0;border-top:1px solid var(--line-strong)}
+}
+@media (max-width:820px){
+  .top{flex-direction:column;align-items:flex-start;padding:14px 16px}
+  .chips{justify-content:flex-start}
+  .rack{grid-template-columns:1fr}
+  .queue{border-right:0;border-bottom:1px solid var(--line-strong)}
+  .col-h,.tabs{padding-left:16px;padding-right:16px}
+  .row{padding-left:13px;padding-right:16px}
+  .review{padding:16px}
+  .stub{padding:16px 16px 18px}
+  .stub h2{font-size:18px}
+  .stub .st{display:none}
+  .steps{padding:4px 16px}
+  .step{grid-template-columns:1fr;gap:8px}
+  .holes .col-h,.holes>p{padding-left:16px;padding-right:16px}
+  .rackbox{margin:0 16px;grid-template-columns:repeat(2,1fr)}
+  .btn{flex:1 1 100%}
+  .learn{grid-template-columns:1fr}
+  .learn>*{padding:20px 16px}
+  .learn>*+*{border-left:0;border-top:1px solid var(--line-strong)}
+  .learn h2{font-size:30px}
+  .trio b{font-size:20px}
+}
+@media (prefers-reduced-motion:reduce){.st-route i{animation:none}.btn{transition:none}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="stamp" aria-hidden="true"><i class="ph ph-tray"></i></span>
+    <div><h1>Dispatch</h1><p>Northfield State University · IT Service Desk</p></div>
+  </div>
+  <ul class="chips" aria-label="System status">
+    <li class="chip ok"><span class="dot" aria-hidden="true"></span><i class="ph ph-cpu" aria-hidden="true"></i>On-device model ready · Gemma in Chrome</li>
+    <li class="chip"><i class="ph ph-cloud" aria-hidden="true"></i>Cloud · Gemini 3.5 Flash-Lite via Firebase AI Logic</li>
+  </ul>
+</header>
+
+<main class="rack">
+  <section class="queue" aria-labelledby="qh">
+    <div class="col-h"><h2 id="qh">Queue</h2><span>8 open</span></div>
+    <div class="tabs" role="group" aria-label="Filter">
+      <button aria-pressed="true">All 8</button><button aria-pressed="false">Needs review 2</button><button aria-pressed="false">Cloud 1</button>
+    </div>
+    <ul>
+      <li><button class="row"><time>10:14</time><span class="snip">course eval link missing for my 3 sections</span><span class="meta"><span class="team">lms-support?</span><span class="st st-route"><i class="ph ph-spinner-gap" aria-hidden="true"></i>routing…</span></span></button></li>
+      <li><button class="row"><time>10:12</time><span class="snip">Duo push never arrives after I got a new phone</span><span class="meta"><span class="team">identity-access?</span><span class="st st-unsure"><i class="ph ph-question" aria-hidden="true"></i>unsure, needs review</span></span></button></li>
+      <li><button class="row" aria-current="true"><time>10:09</time><span class="snip">pharos says no credit, cant release my job in the Ridgeway lab N01234567</span><span class="meta"><span class="team">lab-desktop-west?</span><span class="st st-unsure"><i class="ph ph-question" aria-hidden="true"></i>unsure, needs review</span></span></button></li>
+      <li><button class="row"><time>10:06</time><span class="snip">is this email from the registrar real?</span><span class="meta"><span class="team">security-desk</span><span class="st st-cloud"><i class="ph ph-cloud" aria-hidden="true"></i>checked by cloud</span></span></button></li>
+      <li><button class="row"><time>10:03</time><span class="snip">desk phone has no dial tone, ext 4417</span><span class="meta"><span class="team">telecom</span><span class="st"><i class="ph ph-cpu" aria-hidden="true"></i>routed on device</span></span></button></li>
+      <li><button class="row"><time>09:58</time><span class="snip">need JAWS installed for a student next week</span><span class="meta"><span class="team">accessibility-tech</span><span class="st"><i class="ph ph-cpu" aria-hidden="true"></i>routed on device</span></span></button></li>
+      <li><button class="row"><time>09:55</time><span class="snip">wifi drops every 10 min in Dunmore Tower</span><span class="meta"><span class="team">network-ops</span><span class="st"><i class="ph ph-cpu" aria-hidden="true"></i>routed on device</span></span></button></li>
+      <li><button class="row"><time>09:51</time><span class="snip">canvas final grades not showing in self-service banner</span><span class="meta"><span class="team">sis-support</span><span class="st"><i class="ph ph-cpu" aria-hidden="true"></i>routed on device</span></span></button></li>
+    </ul>
+  </section>
+
+  <section class="review" aria-labelledby="rh">
+    <div class="sheet">
+      <div class="stub">
+        <div><p class="no">Ticket 4187 · received 10:09</p><h2 id="rh">pharos says no credit, cant release my job in the Ridgeway lab N01234567</h2></div>
+        <span class="st st-unsure"><i class="ph ph-question" aria-hidden="true"></i>unsure, needs review</span>
+      </div>
+      <ol class="steps">
+        <li class="step"><span class="n">1</span><div>
+          <h3>On-device answer</h3>
+          <p class="ans"><i class="ph ph-cpu" aria-hidden="true"></i>lab-desktop-west</p>
+          <p class="say"><i class="ph ph-warning-diamond" aria-hidden="true"></i><span>Similar past tickets say <b>print-services</b> (4 of 5). The two disagree, so this ticket is unsure.</span></p>
+        </div></li>
+        <li class="step"><span class="n">2</span><div>
+          <h3>What leaves this computer</h3>
+          <p class="masked">pharos says no credit, cant release my job in the Ridgeway lab <mark>[STUDENT_ID]</mark></p>
+          <p class="note"><i class="ph ph-lock-key" aria-hidden="true"></i><span>The student ID is masked here, on your computer. Only this text goes to Gemini, and only after you approve.</span></p>
+          <div class="btns"><button class="btn pri"><i class="ph ph-paper-plane-tilt" aria-hidden="true"></i>Send masked text to Gemini</button><button class="btn"><i class="ph ph-pencil-simple" aria-hidden="true"></i>Route it myself</button></div>
+        </div></li>
+        <li class="step"><span class="n">3</span><div>
+          <h3>Gemini's answer</h3>
+          <p class="reason"><i class="ph ph-cloud" aria-hidden="true" style="vertical-align:-2px;margin-right:8px"></i><b>Print Services</b> · Pharos credit and charges are Print Services, even from a lab PC</p>
+          <p class="src">Gemini 3.5 Flash-Lite via Firebase AI Logic</p>
+        </div></li>
+        <li class="step"><span class="n">4</span><div>
+          <h3>Your call</h3>
+          <div class="btns" style="margin-top:0"><button class="btn pri"><i class="ph ph-check" aria-hidden="true"></i>Confirm</button><button class="btn"><i class="ph ph-arrows-left-right" aria-hidden="true"></i>Change team</button></div>
+          <p class="saved"><i class="ph ph-check-circle" aria-hidden="true"></i>Saved as example #121 · shared with your desk</p>
+        </div></li>
+      </ol>
+    </div>
+  </section>
+
+  <aside class="holes" aria-labelledby="th">
+    <div class="col-h"><h2 id="th">Teams</h2><span>routed today · 64</span></div>
+    <p>Pigeonholes for the two teams in question are marked.</p>
+    <ul class="rackbox">
+      <li class="hole flag"><span class="nm">lab-desktop-west</span><b>6</b><span class="bar"><i style="width:55%"></i></span><span class="tag">on-device pick</span></li>
+      <li class="hole flag"><span class="nm">print-services</span><b>4</b><span class="bar"><i style="width:36%"></i></span><span class="tag">similar tickets say</span></li>
+      <li class="hole"><span class="nm">lms-support</span><b>11</b><span class="bar"><i style="width:100%"></i></span></li>
+      <li class="hole"><span class="nm">sis-support</span><b>9</b><span class="bar"><i style="width:82%"></i></span></li>
+      <li class="hole"><span class="nm">identity-access</span><b>8</b><span class="bar"><i style="width:73%"></i></span></li>
+      <li class="hole"><span class="nm">network-ops</span><b>7</b><span class="bar"><i style="width:64%"></i></span></li>
+      <li class="hole"><span class="nm">helpdesk-tier1</span><b>5</b><span class="bar"><i style="width:45%"></i></span></li>
+      <li class="hole"><span class="nm">hardware-repair</span><b>4</b><span class="bar"><i style="width:36%"></i></span></li>
+      <li class="hole"><span class="nm">security-desk</span><b>3</b><span class="bar"><i style="width:27%"></i></span></li>
+      <li class="hole"><span class="nm">classroom-av</span><b>3</b><span class="bar"><i style="width:27%"></i></span></li>
+      <li class="hole"><span class="nm">accessibility-tech</span><b>2</b><span class="bar"><i style="width:18%"></i></span></li>
+      <li class="hole"><span class="nm">telecom</span><b>2</b><span class="bar"><i style="width:18%"></i></span></li>
+    </ul>
+  </aside>
+</main>
+
+<section class="learn" aria-labelledby="lh">
+  <div>
+    <h2 id="lh"><em>4 in 10</em> tickets never left the browser</h2>
+    <p class="lead">Every confirmed ticket is saved as an example for the whole desk. The more examples, the fewer tickets need the cloud.</p>
+  </div>
+  <div class="facts">
+    <section><h3>Kept on device</h3>
+      <div class="trio"><div><b>14%</b><span>at 20 examples</span></div><div><b>30%</b><span>at 60</span></div><div><b>39%</b><span>at 120</span></div></div>
+    </section>
+    <section><h3>System accuracy</h3>
+      <p class="pair"><b>84%</b><span>the same as sending every ticket to the cloud</span></p>
+    </section>
+    <section><h3>On-device accuracy</h3>
+      <p class="pair"><b>36%</b><span>with no examples</span><b>62%</b><span>with 120</span></p>
+    </section>
+  </div>
+  <figure class="fig">
+    <svg class="chart" viewBox="0 0 360 186" role="img" aria-labelledby="ct cd">
+<title id="ct">Share of tickets kept on device and on-device accuracy, by number of saved examples</title>
+<desc id="cd">Kept on device: 14% at 20 examples, 30% at 60, 39% at 120. On-device accuracy: 36% with no examples, 62% with 120. System accuracy is 84%, the same as sending every ticket to the cloud.</desc>
+<g class="grid"><line x1="36" x2="346" y1="14" y2="14"/><line x1="36" x2="346" y1="48" y2="48"/><line x1="36" x2="346" y1="82" y2="82"/><line x1="36" x2="346" y1="116" y2="116"/><line class="base" x1="36" x2="346" y1="150" y2="150"/></g>
+<g class="yl" text-anchor="end"><text x="31" y="17">100%</text><text x="31" y="51">75%</text><text x="31" y="85">50%</text><text x="31" y="119">25%</text><text x="31" y="153">0%</text></g>
+<g class="xl"><text x="36" y="166" text-anchor="start">0</text><text x="88" y="166" text-anchor="middle">20</text><text x="191" y="166" text-anchor="middle">60</text><text x="346" y="166" text-anchor="end">120</text><text x="191" y="181" text-anchor="middle">examples saved</text></g>
+<line class="sys" x1="36" x2="346" y1="35.8" y2="35.8"/>
+<text class="lab sysl" x="346" y="29" text-anchor="end">System accuracy 84%, same as all-cloud</text>
+<polyline class="acc" points="36,101 346,65.7"/>
+<circle class="dot acc" cx="36" cy="101" r="3.5"/><circle class="dot acc" cx="346" cy="65.7" r="3.5"/>
+<text class="lab accl" x="104" y="76">On-device accuracy</text>
+<text class="val" x="42" y="93">36%</text><text class="val" x="346" y="57" text-anchor="end">62%</text>
+<polyline class="kept" points="88,131 191,109.2 346,97"/>
+<circle class="dot kept" cx="88" cy="131" r="3.5"/><circle class="dot kept" cx="191" cy="109.2" r="3.5"/><circle class="dot kept" cx="346" cy="97" r="3.5"/>
+<text class="lab keptl" x="222" y="128">Kept on device</text>
+<text class="val" x="88" y="147" text-anchor="middle">14%</text><text class="val" x="191" y="125" text-anchor="middle">30%</text><text class="val" x="346" y="113" text-anchor="end">39%</text>
+</svg>
+    <figcaption>Measured on 80 synthetic test tickets</figcaption>
+  </figure>
+</section>
+</body>
+</html>

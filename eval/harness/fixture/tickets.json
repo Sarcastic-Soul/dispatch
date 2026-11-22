@@ -1,0 +1,5 @@
+[{"id":"F1","text":"pharos says i have no credit and wont release my job in hollis lab","team":"print-services","split":"bank","rule":null,"ambiguous":false},
+ {"id":"F2","text":"duo keeps rejecting my push, locked out of everything","team":"identity-access","split":"bank","rule":null,"ambiguous":false},
+ {"id":"F3","text":"lab pc in crane hall won't boot","team":"lab-desktop-east","split":"bank","rule":null,"ambiguous":false},
+ {"id":"F4","text":"got charged twice for one print job at the library","team":"print-services","split":"holdout","rule":null,"ambiguous":false},
+ {"id":"F5","text":"new phone, duo app gone, cant log in","team":"identity-access","split":"holdout","rule":null,"ambiguous":false}]

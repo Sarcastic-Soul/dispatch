@@ -1,0 +1,1602 @@
+[
+ {
+  "id": "T001",
+  "text": "switch closet in Kessler basement is beeping loudly, the room's very hot",
+  "team": "telecom-network",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T002",
+  "text": "headphone jack on pc 7 in okafor lab is broken and volume wont go above 10%. i need it for my listening quiz. leilani kahale",
+  "team": "lab-desktop-east",
+  "split": "holdout",
+  "rule": "R02",
+  "ambiguous": false
+ },
+ {
+  "id": "T003",
+  "text": "internet is out on my whole floor in Elmhurst, been like 2 days",
+  "team": "resnet",
+  "split": "holdout",
+  "rule": "R05",
+  "ambiguous": false
+ },
+ {
+  "id": "T004",
+  "text": "I forgot my NSU password and the reset link says my account doesn't exist. N07015528",
+  "team": "identity-access",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T005",
+  "text": "Panopto recording from last Thursday is missing for BIOL 150. students emailing me it's not in the Canvas folder",
+  "team": "classroom-av",
+  "split": "bank",
+  "rule": "R08",
+  "ambiguous": true
+ },
+ {
+  "id": "T006",
+  "text": "Respondus LockDown Browser won't launch on my Mac, says 'a required component is missing'. exam is at 3. - Tomasz W., N02348817",
+  "team": "lms-canvas",
+  "split": "bank",
+  "rule": "R09",
+  "ambiguous": false
+ },
+ {
+  "id": "T007",
+  "text": "Hey, I need to borrow a loaner laptop for next week while mine's being repaired. thx - Gabriela Santos",
+  "team": "service-desk",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T008",
+  "text": "Hey, the Macs in Halvorsen 301 won't let anyone save to the desktop and it's making our whole section fail the in-class assignment. Ms. Tran",
+  "team": "lab-desktop-east",
+  "split": "holdout",
+  "rule": "R02",
+  "ambiguous": true
+ },
+ {
+  "id": "T009",
+  "text": "I need a licensed Zoom account, my meetings are cut at 40 minutes",
+  "team": "lms-canvas",
+  "split": "bank",
+  "rule": "R19",
+  "ambiguous": false
+ },
+ {
+  "id": "T010",
+  "text": "tuition payment plan not showing in eBill portal. I enrolled yesterday. N05517809",
+  "team": "financial-aid-systems",
+  "split": "bank",
+  "rule": "R20",
+  "ambiguous": false
+ },
+ {
+  "id": "T011",
+  "text": "need to get into the Banner admin pages from home, IT told me to install something called GlobalProtect first. where do i get it and what do i put as the server",
+  "team": "telecom-network",
+  "split": "holdout",
+  "rule": "R16",
+  "ambiguous": false
+ },
+ {
+  "id": "T012",
+  "text": "Student account charges: 'LAB PRINT CR 6.25' but I never used anything in the Ridgeway lab. N09215530",
+  "team": "print-services",
+  "split": "holdout",
+  "rule": "R01",
+  "ambiguous": true
+ },
+ {
+  "id": "T013",
+  "text": "got a new iPhone and now I can't approve the login for Canvas. old phone is gone",
+  "team": "identity-access",
+  "split": "bank",
+  "rule": "R07",
+  "ambiguous": true
+ },
+ {
+  "id": "T014",
+  "text": "wifi in Aspen keeps dropping every few minutes, 3rd floor. zoom calls are impossible. this has been going on since the semester started and I've told my RA twice. Noor Rahman",
+  "team": "resnet",
+  "split": "bank",
+  "rule": "R05",
+  "ambiguous": false
+ },
+ {
+  "id": "T015",
+  "text": "Turnitin similarity report is blank for 3 submissions",
+  "team": "lms-canvas",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T016",
+  "text": "I haven't gotten the course eval link for any of my 3 classes",
+  "team": "research-computing",
+  "split": "holdout",
+  "rule": "R22",
+  "ambiguous": false
+ },
+ {
+  "id": "T017",
+  "text": "found a USB stick in the parking lot outside Greer Field House. handing it in, who takes it?",
+  "team": "security-phishing",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T018",
+  "text": "I'm a student worker in the Registrar's front office and need access to SPAIDEN. my supervisor Ms. Brooks approved it",
+  "team": "identity-access",
+  "split": "bank",
+  "rule": "R15",
+  "ambiguous": true
+ },
+ {
+  "id": "T019",
+  "text": "Need an enrollment verification letter for my insurance. N03344910 - Yusuf Demir",
+  "team": "registrar-systems",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T020",
+  "text": "URGENT. ransom note appeared on the shared drive folders: all files renamed .locked. started about 20 min ago, I shut my pc down but other people in the office are still connected. Please call me now x6612. Peter Lindgren",
+  "team": "security-phishing",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T021",
+  "text": "student assistant in the Athletics office. Banner shows my forms as read-only and I need to enter eligibility info. my supervisor Coach Delaney says there's something to request. N08846221",
+  "team": "identity-access",
+  "split": "holdout",
+  "rule": "R15",
+  "ambiguous": true
+ },
+ {
+  "id": "T022",
+  "text": "LockDown Browser isn't installed on the PCs in the Brightwater 2nd floor lab and my class is testing there tomorrow at 9. Prof. Lindgren",
+  "team": "lms-canvas",
+  "split": "holdout",
+  "rule": "R09",
+  "ambiguous": true
+ },
+ {
+  "id": "T023",
+  "text": "gradebook final column missing in banner, canvas is fine. 2 sections. HELP. - Prof. Amadi",
+  "team": "registrar-systems",
+  "split": "bank",
+  "rule": "R04",
+  "ambiguous": false
+ },
+ {
+  "id": "T024",
+  "text": "wacom tablets in castellanos 105 aren't working with photoshop since the update",
+  "team": "lab-desktop-west",
+  "split": "bank",
+  "rule": "R03",
+  "ambiguous": false
+ },
+ {
+  "id": "T025",
+  "text": "Recordings for Wednesday's guest lecture are not in Panopto anywhere. I checked the folder and the Canvas tab. Dr. Ito",
+  "team": "classroom-av",
+  "split": "holdout",
+  "rule": "R08",
+  "ambiguous": true
+ },
+ {
+  "id": "T026",
+  "text": "traded in my phone for a new samsung last week and now MyNSU won't let me past the verification screen",
+  "team": "identity-access",
+  "split": "holdout",
+  "rule": "R07",
+  "ambiguous": true
+ },
+ {
+  "id": "T027",
+  "text": "The render machines in Castellanos Arts room 14 are stuck on the login screen. Obinna Eze, N07733402, thesis render due tmrw",
+  "team": "lab-desktop-west",
+  "split": "holdout",
+  "rule": "R03",
+  "ambiguous": false
+ },
+ {
+  "id": "T028",
+  "text": "Panopto says 'processing' for 3 days on my PHIL 101 video from the Lindqvist room. Dr. Elena Petrova",
+  "team": "classroom-av",
+  "split": "holdout",
+  "rule": "R08",
+  "ambiguous": false
+ },
+ {
+  "id": "T029",
+  "text": "need matlab activated on a lab pc in Ridgeway for my controls class, activation key error",
+  "team": "research-computing",
+  "split": "bank",
+  "rule": "R10",
+  "ambiguous": true
+ },
+ {
+  "id": "T030",
+  "text": "My department needs the annual security awareness training link. mine broke",
+  "team": "security-phishing",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T031",
+  "text": "course evaluation emails keep coming but the link takes me to a 'session expired' page",
+  "team": "research-computing",
+  "split": "bank",
+  "rule": "R22",
+  "ambiguous": false
+ },
+ {
+  "id": "T032",
+  "text": "where is my lecture recording?? class was in Pruitt 300",
+  "team": "classroom-av",
+  "split": "bank",
+  "rule": "R08",
+  "ambiguous": false
+ },
+ {
+  "id": "T033",
+  "text": "got a text saying its from nsu it about my financial aid refund. is this real",
+  "team": "security-phishing",
+  "split": "bank",
+  "rule": "R11",
+  "ambiguous": true
+ },
+ {
+  "id": "T034",
+  "text": "lab pc in tamarack hall 2nd floor freezes every 10 mins. Reported last week too. Jordan Whitfield N03355190",
+  "team": "lab-desktop-west",
+  "split": "bank",
+  "rule": "R03",
+  "ambiguous": false
+ },
+ {
+  "id": "T035",
+  "text": "none of my students are showing in my Canvas course. enrollment is 28 in Banner. I've taught this class for 6 years and this has never happened. First day of class was yesterday and I had to hand out paper syllabi. Dr. Carlos Delgado, x3871",
+  "team": "registrar-systems",
+  "split": "bank",
+  "rule": "R21",
+  "ambiguous": true
+ },
+ {
+  "id": "T036",
+  "text": "Greek Row - Sigma house, no wifi on any floor. our president has called twice. Marcus Bell",
+  "team": "telecom-network",
+  "split": "bank",
+  "rule": "R06",
+  "ambiguous": false
+ },
+ {
+  "id": "T037",
+  "text": "scholarship money hasn't been disbursed to my student account. Fatima Al-Sayed N02270956",
+  "team": "financial-aid-systems",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": true
+ },
+ {
+  "id": "T038",
+  "text": "can I get GPU nodes access? our lab trains a vision model and CPU is too slow",
+  "team": "research-computing",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T039",
+  "text": "My Canvas course for CHEM 301 hasn't shown up yet and classes start Monday",
+  "team": "registrar-systems",
+  "split": "bank",
+  "rule": "R21",
+  "ambiguous": false
+ },
+ {
+  "id": "T040",
+  "text": "how do i copy last fall's course content into this semester's Canvas shell",
+  "team": "lms-canvas",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T041",
+  "text": "lectern PC in Halvorsen 110 is frozen on a login screen, class starts in 5",
+  "team": "classroom-av",
+  "split": "bank",
+  "rule": "R24",
+  "ambiguous": true
+ },
+ {
+  "id": "T042",
+  "text": "no sound from any computer in tamarack 304 lab. teacher can't play the video",
+  "team": "lab-desktop-west",
+  "split": "holdout",
+  "rule": "R03",
+  "ambiguous": true
+ },
+ {
+  "id": "T043",
+  "text": "Qualtrics - I can't get into our department's account, says no license for my email. Takeshi Watanabe, Psych dept",
+  "team": "research-computing",
+  "split": "bank",
+  "rule": "R10",
+  "ambiguous": false
+ },
+ {
+  "id": "T044",
+  "text": "Self-Service Banner times out when I click 'Add or Drop Classes'. tried 3 browsers",
+  "team": "registrar-systems",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T045",
+  "text": "Respondus webcam check hangs at 'checking lighting' on every laptop in the Pruitt testing room. exam starts in an hour",
+  "team": "lms-canvas",
+  "split": "holdout",
+  "rule": "R09",
+  "ambiguous": false
+ },
+ {
+  "id": "T046",
+  "text": "The scanner next to the PCs on the 2nd floor of Brightwater is not detected by any computer. Also the mouse at station 14 is dead.",
+  "team": "lab-desktop-east",
+  "split": "bank",
+  "rule": "R02",
+  "ambiguous": false
+ },
+ {
+  "id": "T047",
+  "text": "how do I apply extended time to an exam in Canvas for a student who has an accommodation letter? first time doing this",
+  "team": "accessibility-tech",
+  "split": "holdout",
+  "rule": "R23",
+  "ambiguous": false
+ },
+ {
+  "id": "T048",
+  "text": "I can't see my verification checklist on the aid portal. Student ID N02907741. financial aid office said it's a system thing",
+  "team": "financial-aid-systems",
+  "split": "bank",
+  "rule": "R13",
+  "ambiguous": false
+ },
+ {
+  "id": "T049",
+  "text": "Staff laptop battery swelled up and the trackpad is lifting. dont want to use it. Pruitt 410",
+  "team": "service-desk",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T050",
+  "text": "need to add my assistant as a delegate on my calendar in Outlook",
+  "team": "identity-access",
+  "split": "bank",
+  "rule": "R18",
+  "ambiguous": false
+ },
+ {
+  "id": "T051",
+  "text": "Zoom meeting for an advisory board next week, need live captioning (CART)",
+  "team": "accessibility-tech",
+  "split": "bank",
+  "rule": "R14",
+  "ambiguous": false
+ },
+ {
+  "id": "T052",
+  "text": "new work-study student in the bursar's office, they say i need banner access can u set it up",
+  "team": "identity-access",
+  "split": "bank",
+  "rule": "R15",
+  "ambiguous": false
+ },
+ {
+  "id": "T053",
+  "text": "SAP appeal form on the aid portal won't submit",
+  "team": "financial-aid-systems",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T054",
+  "text": "Printer on the 2nd floor of the Whitlock Union is jammed and showing a paper jam error but there's no paper stuck",
+  "team": "print-services",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T055",
+  "text": "Halvorsen 118 lab - 4 of the PCs show a black screen after login and the profile never loads",
+  "team": "lab-desktop-east",
+  "split": "bank",
+  "rule": "R02",
+  "ambiguous": false
+ },
+ {
+  "id": "T056",
+  "text": "Is my work-study award visible somewhere? I can't see it in the portal",
+  "team": "financial-aid-systems",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T057",
+  "text": "where do I find the FAFSA school code for NSU?",
+  "team": "financial-aid-systems",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T058",
+  "text": "Library lab PC at Brightwater, the one by the window, says 'the trust relationship between this workstation and the primary domain failed'",
+  "team": "lab-desktop-east",
+  "split": "holdout",
+  "rule": "R02",
+  "ambiguous": false
+ },
+ {
+  "id": "T059",
+  "text": "Request alternate format of the textbook for a blind student. Chapters 4-9 by Feb.",
+  "team": "accessibility-tech",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": true
+ },
+ {
+  "id": "T060",
+  "text": "Aid Hub just sends me back to the MyNSU login page again and again after I put my password in. I need to upload my tax docs before the 15th. N03719048",
+  "team": "financial-aid-systems",
+  "split": "holdout",
+  "rule": "R13",
+  "ambiguous": false
+ },
+ {
+  "id": "T061",
+  "text": "Authorized payer invite email never arrived for my dad. we need to pay by friday",
+  "team": "financial-aid-systems",
+  "split": "holdout",
+  "rule": "R20",
+  "ambiguous": false
+ },
+ {
+  "id": "T062",
+  "text": "my account expired after graduation but i still need access to my old email for job apps",
+  "team": "identity-access",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T063",
+  "text": "How do I get Office 365 installed on my personal laptop? I'm a new staff member.",
+  "team": "service-desk",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T064",
+  "text": "LockDown Browser keeps closing when I click on the exam, I'm on a chromebook",
+  "team": "lms-canvas",
+  "split": "bank",
+  "rule": "R09",
+  "ambiguous": false
+ },
+ {
+  "id": "T065",
+  "text": "ergonomic keyboard and voice-control setup, I have carpal tunnel. It's for my work laptop",
+  "team": "accessibility-tech",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T066",
+  "text": "I need an account on the Granite cluster for my thesis project. Advisor is Dr. Volkov",
+  "team": "research-computing",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T067",
+  "text": "need autocad installed on the lab machines in okafor B12 before spring semester, who do i ask? - prof Mehta",
+  "team": "lab-desktop-east",
+  "split": "bank",
+  "rule": "R02",
+  "ambiguous": false
+ },
+ {
+  "id": "T068",
+  "text": "ethernet jack in Cedar Commons 308 is dead, tried 2 cables. N06820153",
+  "team": "resnet",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T069",
+  "text": "Our Student Affairs survey account in Qualtrics needs a new editor added since the old coordinator left. Can someone add Tomas Rivera?",
+  "team": "research-computing",
+  "split": "holdout",
+  "rule": "R10",
+  "ambiguous": false
+ },
+ {
+  "id": "T070",
+  "text": "Can you set up a department copier code for our new grad assistants? - Mason 120",
+  "team": "print-services",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T071",
+  "text": "PS5 won't connect to the network in my room in Elmhurst. says registration needed",
+  "team": "resnet",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T072",
+  "text": "the computer at the podium in Ridgeway 140 doesn't show anything on the projector",
+  "team": "classroom-av",
+  "split": "bank",
+  "rule": "R24",
+  "ambiguous": false
+ },
+ {
+  "id": "T073",
+  "text": "paid tuition thru ebill twice by mistake. portal won't let me see receipts",
+  "team": "financial-aid-systems",
+  "split": "holdout",
+  "rule": "R20",
+  "ambiguous": true
+ },
+ {
+  "id": "T074",
+  "text": "Got an email that looks like it's from the registrar telling me to click to confirm my graduation. Weird link. Forwarded below.\n---------- Forwarded message ----------\nFrom: reg-office@nsu-gradcheck.example\nSubject: URGENT confirm degree",
+  "team": "security-phishing",
+  "split": "bank",
+  "rule": "R11",
+  "ambiguous": true
+ },
+ {
+  "id": "T075",
+  "text": "wireless mic crackles in the Lindqvist auditorium. we have an event tonight 6pm",
+  "team": "classroom-av",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T076",
+  "text": "my mailbox is full and I can't send. I deleted a bunch, still says over quota. Sofia Marchetti, Accounting",
+  "team": "identity-access",
+  "split": "bank",
+  "rule": "R18",
+  "ambiguous": false
+ },
+ {
+  "id": "T077",
+  "text": "my Tuesday lecture in Kessler 112 never showed up in Panopto. the red light was on though",
+  "team": "classroom-av",
+  "split": "bank",
+  "rule": "R08",
+  "ambiguous": false
+ },
+ {
+  "id": "T078",
+  "text": "can i get Zoom Webinar for the fall symposium? ~300 attendees",
+  "team": "lms-canvas",
+  "split": "bank",
+  "rule": "R19",
+  "ambiguous": false
+ },
+ {
+  "id": "T079",
+  "text": "Copy center: do you do spiral binding? need 20 copies of a thesis, N06639012",
+  "team": "print-services",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T080",
+  "text": "course evaluation for my Biology 110 class opens a blank page. N01177342",
+  "team": "research-computing",
+  "split": "bank",
+  "rule": "R22",
+  "ambiguous": false
+ },
+ {
+  "id": "T081",
+  "text": "can't schedule recurring Zoom meetings for my advising hours, the option says 'upgrade'. staff, Pruitt",
+  "team": "lms-canvas",
+  "split": "holdout",
+  "rule": "R19",
+  "ambiguous": true
+ },
+ {
+  "id": "T082",
+  "text": "the Calls icon is missing from my Teams app, my coworkers all have it. Mason accounting",
+  "team": "telecom-network",
+  "split": "holdout",
+  "rule": "R12",
+  "ambiguous": true
+ },
+ {
+  "id": "T083",
+  "text": "FAFSA verification portal says 'document rejected' for my tax transcript but I uploaded the right one",
+  "team": "financial-aid-systems",
+  "split": "bank",
+  "rule": "R13",
+  "ambiguous": false
+ },
+ {
+  "id": "T084",
+  "text": "got an email saying i won a $500 bookstore credit if i update my Aid Hub profile. the link is super long and weird looking. i did not click",
+  "team": "security-phishing",
+  "split": "holdout",
+  "rule": "R11",
+  "ambiguous": false
+ },
+ {
+  "id": "T085",
+  "text": "Something is broken and I don't know who to ask. Please advise.",
+  "team": "service-desk",
+  "split": "holdout",
+  "rule": "R17",
+  "ambiguous": true
+ },
+ {
+  "id": "T086",
+  "text": "we have a visiting speaker next Tuesday, how do we give her wifi? guest account needed",
+  "team": "identity-access",
+  "split": "bank",
+  "rule": "R26",
+  "ambiguous": true
+ },
+ {
+  "id": "T087",
+  "text": "How long do Zoom cloud recordings stay before they delete? I need last year's seminar.",
+  "team": "lms-canvas",
+  "split": "holdout",
+  "rule": "R19",
+  "ambiguous": false
+ },
+ {
+  "id": "T088",
+  "text": "students can't open the quiz, Canvas says to use LockDown Browser but the download link goes to a 404",
+  "team": "lms-canvas",
+  "split": "bank",
+  "rule": "R09",
+  "ambiguous": false
+ },
+ {
+  "id": "T089",
+  "text": "desk phone in Mason 214 has no dial tone. moved offices last week and nobody connected it. I have no way to take calls, this is the front desk for admissions. Ingrid Solberg x4102",
+  "team": "telecom-network",
+  "split": "bank",
+  "rule": "R12",
+  "ambiguous": false
+ },
+ {
+  "id": "T090",
+  "text": "no internet on any wired computer in Lindqvist this morning, whole building",
+  "team": "telecom-network",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T091",
+  "text": "need to give a student extra time on the midterm quiz. disability services sent the letter",
+  "team": "accessibility-tech",
+  "split": "bank",
+  "rule": "R23",
+  "ambiguous": false
+ },
+ {
+  "id": "T092",
+  "text": "student employee, Banner forms say 'you are not authorized' for this form. i could open it last semester",
+  "team": "identity-access",
+  "split": "bank",
+  "rule": "R15",
+  "ambiguous": false
+ },
+ {
+  "id": "T093",
+  "text": "GlobalProtect icon in my taskbar goes grey every 20 min when I work from my apartment and then the P: drive vanishes",
+  "team": "telecom-network",
+  "split": "holdout",
+  "rule": "R16",
+  "ambiguous": false
+ },
+ {
+  "id": "T094",
+  "text": "weighted gradebook totals don't match what I set. assignment groups are 30/30/40 but the totals show differently",
+  "team": "lms-canvas",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T095",
+  "text": "Our department got a Pharos statement for $214 for handouts that were printed from the Okafor lab PCs last month. The class was supposed to be on the grant cost center. Who can look into the charges and move them?",
+  "team": "print-services",
+  "split": "holdout",
+  "rule": "R01",
+  "ambiguous": false
+ },
+ {
+  "id": "T096",
+  "text": "Hi, I printed a 40 page reading from a lab computer in Tamarack and it charged me the full amount but nothing came out of the printer. N04418823. Can I get the credit back? Thanks, Avery",
+  "team": "print-services",
+  "split": "bank",
+  "rule": "R01",
+  "ambiguous": true
+ },
+ {
+  "id": "T097",
+  "text": "can't connect to eduroam in the Lindqvist atrium. N04402981",
+  "team": "telecom-network",
+  "split": "holdout",
+  "rule": "R06",
+  "ambiguous": false
+ },
+ {
+  "id": "T098",
+  "text": "need a bypass code, my phone is dead and I am at the office. can't get into email. Dr. Haddad",
+  "team": "identity-access",
+  "split": "bank",
+  "rule": "R07",
+  "ambiguous": false
+ },
+ {
+  "id": "T099",
+  "text": "my aid package isn't showing up for fall. i accepted last month",
+  "team": "financial-aid-systems",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T100",
+  "text": "is this email real? it says my Aid Hub account will be suspended unless I verify",
+  "team": "security-phishing",
+  "split": "bank",
+  "rule": "R11",
+  "ambiguous": true
+ },
+ {
+  "id": "T101",
+  "text": "projector in Kessler 210 is not turning on at all, remote has new batteries. Jamal Carter",
+  "team": "classroom-av",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T102",
+  "text": "instructor computer Tamarack Hall 115 says 'user profile service failed the sign-in' every time. Prof. Valentina Rossi",
+  "team": "classroom-av",
+  "split": "holdout",
+  "rule": "R24",
+  "ambiguous": false
+ },
+ {
+  "id": "T103",
+  "text": "Just got admitted and cant activate my NSU account, the code in my admit email isn't working. Hyun-woo Park",
+  "team": "identity-access",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T104",
+  "text": "how do I load a newer python module on granite? I need python 3.11 with pytorch",
+  "team": "research-computing",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T105",
+  "text": "globalprotect connected but i can't reach the shared drive. mac, ventura",
+  "team": "telecom-network",
+  "split": "bank",
+  "rule": "R16",
+  "ambiguous": true
+ },
+ {
+  "id": "T106",
+  "text": "Need to report a possible data exposure, a spreadsheet with student IDs was emailed to the wrong list",
+  "team": "security-phishing",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": true
+ },
+ {
+  "id": "T107",
+  "text": "I need captions added to a Panopto lecture video for a student with accommodations. They need it by Monday",
+  "team": "accessibility-tech",
+  "split": "bank",
+  "rule": "R14",
+  "ambiguous": true
+ },
+ {
+  "id": "T108",
+  "text": "Canvas app asks me to 'Enter code sent to ***-**44' and that's my old number. can't get to my assignments before 5pm. Ramona Silva",
+  "team": "identity-access",
+  "split": "holdout",
+  "rule": "R07",
+  "ambiguous": false
+ },
+ {
+  "id": "T109",
+  "text": "it's not working",
+  "team": "service-desk",
+  "split": "bank",
+  "rule": "R17",
+  "ambiguous": true
+ },
+ {
+  "id": "T110",
+  "text": "SPSS licence expired on my office computer in Okafor. 'The license has expired'",
+  "team": "research-computing",
+  "split": "bank",
+  "rule": "R10",
+  "ambiguous": true
+ },
+ {
+  "id": "T111",
+  "text": "Student using JAWS can't read the quiz in Canvas. the answer choices aren't announced",
+  "team": "accessibility-tech",
+  "split": "bank",
+  "rule": "R14",
+  "ambiguous": true
+ },
+ {
+  "id": "T112",
+  "text": "NSU wifi isn't working at the Willow apts. my laptop connects then says no internet",
+  "team": "telecom-network",
+  "split": "holdout",
+  "rule": "R06",
+  "ambiguous": true
+ },
+ {
+  "id": "T113",
+  "text": "---------- Forwarded message ---------\nFrom: Financial Aid Office <finaid@northfield-state.example>\nSubject: Re: Your aid package\n\nHi Marisol, we can see your aid package on our side, but the portal page may be showing you an error. You will need to contact IT about that.\n----------\nI'm still getting error 403 when I open my aid package on the portal. Marisol Vega N04019966",
+  "team": "financial-aid-systems",
+  "split": "holdout",
+  "rule": "R13",
+  "ambiguous": true
+ },
+ {
+  "id": "T114",
+  "text": "my slurm job has been PENDING for 2 days with reason Priority. - Ana Lucia Ferreira",
+  "team": "research-computing",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T115",
+  "text": "My laptop was stolen from my car. it has student data on it. who do I report to?",
+  "team": "security-phishing",
+  "split": "bank",
+  "rule": "R25",
+  "ambiguous": false
+ },
+ {
+  "id": "T116",
+  "text": "help",
+  "team": "service-desk",
+  "split": "bank",
+  "rule": "R17",
+  "ambiguous": true
+ },
+ {
+  "id": "T117",
+  "text": "---------- Forwarded message ----------\nFrom: Registrar Billing <registrar@nsu-records.example>\nSubject: Final notice: transcript fee\n\nYou owe a $75 transcript fee. Pay through the link below by Friday or your diploma will be held.\n----------\nI have never had a bill like this from them. Is this actually from the registrar? N02845519",
+  "team": "security-phishing",
+  "split": "holdout",
+  "rule": "R11",
+  "ambiguous": false
+ },
+ {
+  "id": "T118",
+  "text": "my research share is full: 'quota exceeded' on /proj/ecology",
+  "team": "research-computing",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T119",
+  "text": "Need an official transcript sent to University of Waterloo, how do I order? - Siddharth Rao",
+  "team": "registrar-systems",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T120",
+  "text": "windows keeps asking to update and restart on the Ridgeway lab pcs during class. happened 3 times this week and we lose our unsaved work. Prof. Siobhan Gallagher, x5528",
+  "team": "lab-desktop-west",
+  "split": "bank",
+  "rule": "R03",
+  "ambiguous": false
+ },
+ {
+  "id": "T121",
+  "text": "Okafor 202: the front computer boots to a blank desktop, no icons, can't open PowerPoint. class of 60 sitting here",
+  "team": "classroom-av",
+  "split": "holdout",
+  "rule": "R24",
+  "ambiguous": true
+ },
+ {
+  "id": "T122",
+  "text": "assignment submission keeps spinning and then says failed. file is 8MB pdf. Maya Johnson, N03388105",
+  "team": "lms-canvas",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T123",
+  "text": "wired port keeps flapping in Fairview 411, laptop connects then drops in seconds",
+  "team": "resnet",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T124",
+  "text": "Dept chair here. The response rate report for our course evaluations shows 0% for 3 sections although students say they submitted them. Dr. Amelia Whitcombe, x3920",
+  "team": "research-computing",
+  "split": "holdout",
+  "rule": "R22",
+  "ambiguous": false
+ },
+ {
+  "id": "T125",
+  "text": "A popup on my laptop says my computer is infected and to call a Microsoft number. what do I do",
+  "team": "security-phishing",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T126",
+  "text": "keyboard at station 22 of the Ridgeway lab has sticky keys and the PC is slow, it takes like 5 min to open Chrome",
+  "team": "lab-desktop-west",
+  "split": "holdout",
+  "rule": "R03",
+  "ambiguous": false
+ },
+ {
+  "id": "T127",
+  "text": "voicemail light on my desk phone is blinking but there are no messages. ext x4471",
+  "team": "telecom-network",
+  "split": "bank",
+  "rule": "R12",
+  "ambiguous": false
+ },
+ {
+  "id": "T128",
+  "text": "cross-listed sections should be merged into one course shell, can you merge them?",
+  "team": "registrar-systems",
+  "split": "holdout",
+  "rule": "R21",
+  "ambiguous": false
+ },
+ {
+  "id": "T129",
+  "text": "I need Read&Write installed for a student with dyslexia. Faculty referral",
+  "team": "accessibility-tech",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T130",
+  "text": "SolidWorks license error on the machines in Ridgeway 220. says server unavailable",
+  "team": "lab-desktop-west",
+  "split": "bank",
+  "rule": "R03",
+  "ambiguous": true
+ },
+ {
+  "id": "T131",
+  "text": "Pi Kappa house on Greek Row has terrible wireless. 20 people live here and it drops every night",
+  "team": "telecom-network",
+  "split": "holdout",
+  "rule": "R06",
+  "ambiguous": true
+ },
+ {
+  "id": "T132",
+  "text": "DNS issue? i can reach sites by IP but not names, on the campus wired network",
+  "team": "telecom-network",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T133",
+  "text": "toner is out in the Mason Hall 3rd floor copier, Nguyen Thi Hoa x2210",
+  "team": "print-services",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T134",
+  "text": "My guest lecturer from Lisbon needs internet for her laptop during a talk on Thursday in Lindqvist 101. what do we set up for her? - Dr. Park's office",
+  "team": "identity-access",
+  "split": "holdout",
+  "rule": "R26",
+  "ambiguous": true
+ },
+ {
+  "id": "T135",
+  "text": "can dragon naturallyspeaking be installed on my office computer? i have RSI",
+  "team": "accessibility-tech",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T136",
+  "text": "lectern computer in castellanos 22 won't turn on at all. other rooms are fine",
+  "team": "classroom-av",
+  "split": "bank",
+  "rule": "R24",
+  "ambiguous": false
+ },
+ {
+  "id": "T137",
+  "text": "ethernet wall jack in Mason 212 doesn't work. other jacks in the office do",
+  "team": "telecom-network",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T138",
+  "text": "Aid Hub gives a blank page when I click upload verification documents. Chrome and Safari. N08120356",
+  "team": "financial-aid-systems",
+  "split": "bank",
+  "rule": "R13",
+  "ambiguous": false
+ },
+ {
+  "id": "T139",
+  "text": "my office pc (Mason 301) won't turn on. the light blinks orange",
+  "team": "service-desk",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T140",
+  "text": "request: 2 TB research storage for a new NSF grant. PI is Dr. Adeyemi-Clarke",
+  "team": "research-computing",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T141",
+  "text": "wrong major in Self-Service Banner, I declared Biology not Chemistry in March",
+  "team": "registrar-systems",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T142",
+  "text": "I keep getting Duo pushes at 3am that I didn't ask for. Mei-Ling Zhou, N06014528",
+  "team": "security-phishing",
+  "split": "holdout",
+  "rule": "R25",
+  "ambiguous": true
+ },
+ {
+  "id": "T143",
+  "text": "Can someone show me how to use the document camera in Kessler 118? first time teaching in there",
+  "team": "classroom-av",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T144",
+  "text": "wifi in the Whitlock Student Union food court is down",
+  "team": "telecom-network",
+  "split": "bank",
+  "rule": "R06",
+  "ambiguous": false
+ },
+ {
+  "id": "T145",
+  "text": "my email sent spam to everyone in my contacts and i can't log in. password reset not working",
+  "team": "security-phishing",
+  "split": "bank",
+  "rule": "R25",
+  "ambiguous": false
+ },
+ {
+  "id": "T146",
+  "text": "xbox gets NAT type strict in Birchwood and my friend can't join party chat",
+  "team": "resnet",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T147",
+  "text": "can't pay my bill, the payment button on the bursar page spins forever. Diego Ramirez N06190274",
+  "team": "financial-aid-systems",
+  "split": "bank",
+  "rule": "R20",
+  "ambiguous": true
+ },
+ {
+  "id": "T148",
+  "text": "Canvas to Banner grade passback failed for my lab section with code 17. i'm in the Okafor building if that matters",
+  "team": "registrar-systems",
+  "split": "holdout",
+  "rule": "R04",
+  "ambiguous": true
+ },
+ {
+  "id": "T149",
+  "text": "I'm enrolled in MATH 220 (CRN 41872) but the course isn't listed in my Canvas dashboard. N05127730",
+  "team": "registrar-systems",
+  "split": "holdout",
+  "rule": "R21",
+  "ambiguous": true
+ },
+ {
+  "id": "T150",
+  "text": "Can you set up a time extension on the final for one of my students? letter attached from Student Access",
+  "team": "accessibility-tech",
+  "split": "holdout",
+  "rule": "R23",
+  "ambiguous": false
+ },
+ {
+  "id": "T151",
+  "text": "Our department mailing list needs 3 people added. dist list is chem-faculty",
+  "team": "identity-access",
+  "split": "holdout",
+  "rule": "R18",
+  "ambiguous": false
+ },
+ {
+  "id": "T152",
+  "text": "outlook says 'you do not have permission to access this calendar' for our conference room",
+  "team": "identity-access",
+  "split": "holdout",
+  "rule": "R18",
+  "ambiguous": true
+ },
+ {
+  "id": "T153",
+  "text": "adobe premiere keeps crashing on the okafor science center lab computers, we have a project due friday",
+  "team": "lab-desktop-east",
+  "split": "bank",
+  "rule": "R02",
+  "ambiguous": false
+ },
+ {
+  "id": "T154",
+  "text": "Banner access for my TA Mateo to see section rosters. I'm his faculty supervisor.",
+  "team": "identity-access",
+  "split": "holdout",
+  "rule": "R15",
+  "ambiguous": false
+ },
+ {
+  "id": "T155",
+  "text": "HDMI cable in Lindqvist 305 broke, laptop won't display on the screen",
+  "team": "classroom-av",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T156",
+  "text": "Locked out. Duo keeps saying 'push expired' and then locks my account for 30 min. I have an exam portal opening at 9 and I can't get into anything. Aaliyah Brooks",
+  "team": "identity-access",
+  "split": "bank",
+  "rule": "R07",
+  "ambiguous": false
+ },
+ {
+  "id": "T157",
+  "text": "Accommodation: separate room and 2x time. How do I set up the Canvas quiz so it works for him? Prof. Whitaker",
+  "team": "accessibility-tech",
+  "split": "bank",
+  "rule": "R23",
+  "ambiguous": true
+ },
+ {
+  "id": "T158",
+  "text": "loan acceptance page throws an error after I click confirm (N02281946)",
+  "team": "financial-aid-systems",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T159",
+  "text": "can the Panopto auto-captions for last week's lectures be fixed? they're full of mistakes and one student is complaining",
+  "team": "accessibility-tech",
+  "split": "holdout",
+  "rule": "R14",
+  "ambiguous": true
+ },
+ {
+  "id": "T160",
+  "text": "how to set up the new monitor and docking station at my desk? i got hired last month",
+  "team": "service-desk",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T161",
+  "text": "need a new network drop installed in the new lab space on Pruitt 2nd floor",
+  "team": "telecom-network",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T162",
+  "text": "ENGL 210 finals are all entered in Canvas but when I go to submit grades the roll in MyNSU is empty. deadline is tomorrow noon",
+  "team": "registrar-systems",
+  "split": "holdout",
+  "rule": "R04",
+  "ambiguous": false
+ },
+ {
+  "id": "T163",
+  "text": "my computer is acting weird since this morning",
+  "team": "service-desk",
+  "split": "bank",
+  "rule": "R17",
+  "ambiguous": true
+ },
+ {
+  "id": "T164",
+  "text": "final grades I entered in Canvas aren't showing up in Self-Service Banner. grades are due Monday!",
+  "team": "registrar-systems",
+  "split": "bank",
+  "rule": "R04",
+  "ambiguous": false
+ },
+ {
+  "id": "T165",
+  "text": "Canvas discussion board replies aren't threaded the way I set it. also students can't edit their posts",
+  "team": "lms-canvas",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": true
+ },
+ {
+  "id": "T166",
+  "text": "need ZoomText for my low vision on my own laptop, how to get licence",
+  "team": "accessibility-tech",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T167",
+  "text": "Zoom cloud recording from my class is gone. where do they go? Zainab Hussain",
+  "team": "lms-canvas",
+  "split": "bank",
+  "rule": "R19",
+  "ambiguous": false
+ },
+ {
+  "id": "T168",
+  "text": "can you give me access to the shared mailbox for the dean's office (deansoffice@northfield-state.example)?",
+  "team": "identity-access",
+  "split": "bank",
+  "rule": "R18",
+  "ambiguous": false
+ },
+ {
+  "id": "T169",
+  "text": "cant get in",
+  "team": "service-desk",
+  "split": "holdout",
+  "rule": "R17",
+  "ambiguous": true
+ },
+ {
+  "id": "T170",
+  "text": "my voicemail messages show up in my Outlook junk folder as little transcripts and i never get a notification. ext 3290",
+  "team": "telecom-network",
+  "split": "holdout",
+  "rule": "R12",
+  "ambiguous": false
+ },
+ {
+  "id": "T171",
+  "text": "eBill gives an error when I try to add my parent as an authorized payer",
+  "team": "financial-aid-systems",
+  "split": "bank",
+  "rule": "R20",
+  "ambiguous": false
+ },
+ {
+  "id": "T172",
+  "text": "SAS on the workstations in Tamarack 210 gives a licence-server error since monday. class uses it for the lab on thursday",
+  "team": "research-computing",
+  "split": "holdout",
+  "rule": "R10",
+  "ambiguous": false
+ },
+ {
+  "id": "T173",
+  "text": "Rohan Mehta (staff, Bursar): GlobalProtect keeps saying 'gateway not responding' from home since the update on tuesday. reinstalled twice.",
+  "team": "telecom-network",
+  "split": "bank",
+  "rule": "R16",
+  "ambiguous": false
+ },
+ {
+  "id": "T174",
+  "text": "I have a registration hold but don't know why. N03228491",
+  "team": "registrar-systems",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T175",
+  "text": "My antivirus (CrowdStrike) popped an alert on my work laptop saying 'prevented' something. should i be worried",
+  "team": "security-phishing",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": true
+ },
+ {
+  "id": "T176",
+  "text": "why is there a 'Pharos fee' of 18.75 on my account. i never print. this is the 2nd time this semester. Tyrone Jackson N03901177",
+  "team": "print-services",
+  "split": "bank",
+  "rule": "R01",
+  "ambiguous": false
+ },
+ {
+  "id": "T177",
+  "text": "student with 1.5x extended time accommodation, I need her quiz settings changed in Canvas",
+  "team": "accessibility-tech",
+  "split": "bank",
+  "rule": "R23",
+  "ambiguous": true
+ },
+ {
+  "id": "T178",
+  "text": "eduroam won't connect in my room in Birchwood Hall, says 'unable to join network' but works at the library",
+  "team": "resnet",
+  "split": "bank",
+  "rule": "R05",
+  "ambiguous": true
+ },
+ {
+  "id": "T179",
+  "text": "Zoom auto captions keep cutting out in my Wednesday seminar. a student told me she depends on them. Dr. Fiona McAllister",
+  "team": "accessibility-tech",
+  "split": "holdout",
+  "rule": "R14",
+  "ambiguous": false
+ },
+ {
+  "id": "T180",
+  "text": "Laptop won't pick up eduroam in Fairview 5th floor east wing. Works fine on my phone hotspot.",
+  "team": "resnet",
+  "split": "holdout",
+  "rule": "R05",
+  "ambiguous": true
+ },
+ {
+  "id": "T181",
+  "text": "My Canvas gradebook has everyone's final but Banner roster says 'grade not submitted' for 12 students. I have submitted them. Three other faculty in the department have the same problem so I think something is broken. Our deadline is 9am Monday and the chair is asking.",
+  "team": "registrar-systems",
+  "split": "bank",
+  "rule": "R04",
+  "ambiguous": false
+ },
+ {
+  "id": "T182",
+  "text": "name change on my NSU account, I got married - preferred name is wrong on everything",
+  "team": "identity-access",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T183",
+  "text": "got charged $4.50 for 3 pages in the brightwater lab?? the screen said I had credit left when i logged in",
+  "team": "print-services",
+  "split": "bank",
+  "rule": "R01",
+  "ambiguous": true
+ },
+ {
+  "id": "T184",
+  "text": "need a phone number set up in Teams so students can call my office line",
+  "team": "telecom-network",
+  "split": "bank",
+  "rule": "R12",
+  "ambiguous": false
+ },
+ {
+  "id": "T185",
+  "text": "I filled out the evaluation for my stats professor but it says 'already completed' for the other class too and I never opened it. Priya Raghunathan",
+  "team": "research-computing",
+  "split": "bank",
+  "rule": "R22",
+  "ambiguous": true
+ },
+ {
+  "id": "T186",
+  "text": "need 5 posters 36x48 printed for the research symposium. what's the turnaround and cost?",
+  "team": "print-services",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T187",
+  "text": "Hi. Yesterday I got three Duo alerts that I didn't start, then an email saying a new device signed in from Lagos. I changed my password right away. Today I'm STILL seeing sign-in notifications for my account. I'm a TA and I have student grades in there. Please help, I'm scared. - Chidi Nwosu, N06604281",
+  "team": "security-phishing",
+  "split": "bank",
+  "rule": "R25",
+  "ambiguous": true
+ },
+ {
+  "id": "T188",
+  "text": "How do I register my Chromecast on NSU-Devices so it shows up? I'm in Aspen",
+  "team": "resnet",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T189",
+  "text": "need Poll Everywhere clicker base station set up for Pruitt 120 next semester",
+  "team": "classroom-av",
+  "split": "bank",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T190",
+  "text": "two students dropped in Banner but are still in my Canvas class",
+  "team": "registrar-systems",
+  "split": "bank",
+  "rule": "R21",
+  "ambiguous": false
+ },
+ {
+  "id": "T191",
+  "text": "smart tv in my room wants me to sign in to a portal page and it can't",
+  "team": "resnet",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": true
+ },
+ {
+  "id": "T192",
+  "text": "new adjunct, no NetID yet. HR said it would be ready",
+  "team": "identity-access",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": true
+ },
+ {
+  "id": "T193",
+  "text": "my print job sits in the Pharos release queue forever and never prints at the Kessler station",
+  "team": "print-services",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": true
+ },
+ {
+  "id": "T194",
+  "text": "i clicked a link in an email that said payroll update. didnt enter anything, closed the tab. should i be worried. Kwame Mensah (x3345)",
+  "team": "security-phishing",
+  "split": "bank",
+  "rule": "R11",
+  "ambiguous": false
+ },
+ {
+  "id": "T195",
+  "text": "Hi my roommate and i are in Dunmore Tower 1214 and our phones connect to NSU wifi but no internet. iPhone and Pixel both. - Sana, N01887264",
+  "team": "resnet",
+  "split": "bank",
+  "rule": "R05",
+  "ambiguous": false
+ },
+ {
+  "id": "T196",
+  "text": "can't find where to turn on the new quizzes in my course",
+  "team": "lms-canvas",
+  "split": "holdout",
+  "rule": null,
+  "ambiguous": false
+ },
+ {
+  "id": "T197",
+  "text": "conference attendees need NSU-Guest codes for 60 people, event in Whitlock Union",
+  "team": "identity-access",
+  "split": "bank",
+  "rule": "R26",
+  "ambiguous": true
+ },
+ {
+  "id": "T198",
+  "text": "my NSU-issued phone went into the lake while kayaking. Outlook and Teams were on it. can you wipe it or whatever? Latoya Simmons",
+  "team": "security-phishing",
+  "split": "holdout",
+  "rule": "R25",
+  "ambiguous": false
+ },
+ {
+  "id": "T199",
+  "text": "need vpn to access the library databases from off campus, how do I set it up?",
+  "team": "telecom-network",
+  "split": "bank",
+  "rule": "R16",
+  "ambiguous": false
+ },
+ {
+  "id": "T200",
+  "text": "eduroam dead in Willow Apartments building C. been out since sunday",
+  "team": "telecom-network",
+  "split": "bank",
+  "rule": "R06",
+  "ambiguous": true
+ }
+]

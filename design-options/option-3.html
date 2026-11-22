@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dispatch · Option 3 · Campus memo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<style>
+:root{
+  --cream:#F5F1E6; --sheet:#FBF8F0; --tint:#E9E4D3; --tint-2:#DDD7C2;
+  --ink:#1D2520; --ink-2:#57625B; --line:#D3CCB6;
+  --green:#1E5A41; --green-2:#17482F; --on-green:#F5F1E6;
+  --serif:"Fraunces",Georgia,serif; --sans:"Manrope",ui-sans-serif,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font:400 15px/1.5 var(--sans)}
+ul,ol{list-style:none;padding:0}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+i.ph-light{font-size:18px;flex:none}
+h1,h2,h3{font-family:var(--serif);font-weight:500}
+
+.page{max-width:1600px;margin:0 auto;padding:0 40px}
+.mast{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;padding:26px 0 18px;border-bottom:3px solid var(--green)}
+.mast h1{font-size:44px;line-height:1;letter-spacing:-.02em;color:var(--green);font-weight:600}
+.mast p{color:var(--ink-2);margin-top:6px;font-weight:500}
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.chip{display:inline-flex;align-items:center;gap:8px;font:500 13px/1.2 var(--sans);padding:8px 12px;background:var(--tint);color:var(--ink)}
+.chip i{color:var(--green)}
+
+.main{display:grid;grid-template-columns:344px minmax(0,1fr);gap:48px;padding:28px 0 36px}
+/* queue */
+.queue h2{font-size:24px;line-height:1.1;display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.queue h2 span{font:500 13px var(--sans);color:var(--ink-2)}
+.queue .sub{font-size:13px;color:var(--ink-2);margin-bottom:10px}
+.item{display:block;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:12px 12px 12px 14px;border-left:4px solid transparent;min-height:44px}
+.item:hover{background:var(--tint)}
+.item[aria-current=true]{background:var(--tint);border-left-color:var(--green)}
+.item .l1{display:flex;gap:10px;align-items:baseline}
+.item time{font:600 12px var(--sans);color:var(--ink-2);font-variant-numeric:tabular-nums;flex:none;width:38px}
+.item .snip{font-weight:600;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.item .l2{margin:4px 0 0 48px;display:flex;flex-wrap:wrap;gap:2px 10px;align-items:center;font-size:12.5px;color:var(--ink-2)}
+.item .team{font-weight:600;color:var(--ink);overflow-wrap:anywhere}
+.st{display:inline-flex;align-items:center;gap:5px}
+.st i{font-size:15px}
+.st-unsure{color:var(--on-green);background:var(--green);padding:1px 8px 1px 5px;font-weight:600}
+.st-route i{animation:spin 1.4s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* memo */
+.memo{background:var(--sheet);padding:36px 44px 40px;min-width:0}
+.memo .meta{font-size:13px;font-weight:600;color:var(--ink-2);display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.memo h2{font-size:34px;line-height:1.15;letter-spacing:-.015em;margin:10px 0 10px;max-width:24em;overflow-wrap:anywhere}
+.memo .lede{font-size:17px;max-width:44em;color:var(--ink)}
+.rule{height:3px;background:var(--green);margin:24px 0 26px;width:72px}
+.cols{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:40px;align-items:start}
+.cols h3{font-size:22px;line-height:1.2;margin-bottom:10px}
+.block+.block{margin-top:30px}
+.team-big{font:600 17px var(--sans);background:var(--tint);padding:12px 14px;display:flex;align-items:center;gap:10px;overflow-wrap:anywhere}
+.team-big i{color:var(--green)}
+.cols p+p{margin-top:10px}
+.cols p b{font-weight:700}
+.warn{display:flex;gap:10px;align-items:flex-start}
+.warn i{color:var(--green);margin-top:3px}
+.masked{font:500 15px/1.65 var(--sans);background:var(--tint);padding:14px 16px;border-left:4px solid var(--green);overflow-wrap:anywhere}
+mark{background:var(--green);color:var(--on-green);padding:1px 6px;font-weight:700}
+.note{font-size:13.5px;color:var(--ink-2);display:flex;gap:8px;align-items:flex-start;margin-top:10px}
+.note i{margin-top:2px;color:var(--green)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 18px;font:700 14.5px var(--sans);border:2px solid var(--green);background:none;color:var(--green);transition:background .15s,color .15s}
+.btn:hover{background:var(--tint)}
+.btn.pri{background:var(--green);color:var(--on-green)}
+.btn.pri:hover{background:var(--green-2)}
+.btn:active{transform:translateY(1px)}
+.answer{background:var(--green);color:var(--on-green);padding:26px 28px 26px}
+.answer h3{color:var(--on-green);font-size:30px;line-height:1.1;margin-bottom:12px}
+.answer .why{font-size:17px;line-height:1.5}
+.answer .via{font-size:13px;margin-top:12px;display:flex;gap:8px;align-items:center;opacity:.92}
+.answer hr{border:0;border-top:1px solid rgba(245,241,230,.35);margin:22px 0 18px}
+.answer .q{font:600 13px var(--sans);margin-bottom:12px}
+.answer .btn{border-color:var(--on-green);color:var(--on-green)}
+.answer .btn:hover{background:var(--green-2)}
+.answer .btn.pri{background:var(--on-green);color:var(--green)}
+.answer .btn.pri:hover{background:#fff8e8}
+.answer .btns{margin-top:0}
+.saved{display:flex;gap:10px;align-items:center;margin-top:18px;font-weight:600;font-size:14.5px}
+.saved i{font-size:22px}
+
+/* learning */
+.learn{background:var(--tint);margin:0 -40px;padding:36px 40px 40px}
+.learn-in{max-width:1520px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:56px;align-items:center}
+.learn h2{font-size:60px;line-height:1;letter-spacing:-.025em;color:var(--green);font-weight:600}
+.learn h2 small{display:block;font-size:30px;line-height:1.1;margin-top:8px;color:var(--ink);font-weight:500;letter-spacing:-.01em}
+.learn .lead{max-width:36em;margin-top:14px;font-size:16px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:24px}
+.facts div{border-top:3px solid var(--green);padding-top:10px}
+.facts b{display:block;font:700 24px/1.15 var(--sans);white-space:nowrap;font-variant-numeric:tabular-nums}
+.facts span{font-size:13.5px;color:var(--ink-2);display:block;margin-top:4px;line-height:1.35}
+.facts .wide{grid-column:span 1}
+.kept{display:flex;gap:18px;margin-top:20px;flex-wrap:wrap;font-size:14px}
+.kept b{font-weight:700;font-variant-numeric:tabular-nums}
+.fig{background:var(--sheet);padding:20px 22px 14px;max-width:600px}
+.chart{width:100%;max-width:540px;height:auto;display:block}
+.chart text{font-family:var(--sans);font-size:10.5px;fill:var(--ink-2);font-weight:500}
+.chart .grid line{stroke:var(--line);stroke-width:1}.chart .grid .base{stroke:var(--ink-2)}
+.chart .sys{stroke:var(--ink);stroke-width:1.5;stroke-dasharray:5 4}
+.chart .sysl,.chart .accl{fill:var(--ink)}
+.chart polyline{fill:none}
+.chart .acc{stroke:var(--ink-2);stroke-width:2}.chart circle.acc{fill:var(--ink-2)}
+.chart .kept{stroke:var(--green);stroke-width:3.5}.chart circle.kept{fill:var(--green)}
+.chart .keptl{fill:var(--green);font-weight:700}
+.chart .val{fill:var(--ink);font-weight:700}
+figcaption{font-size:13px;color:var(--ink-2);font-weight:600;margin-top:8px}
+
+@media (max-width:1180px){
+  .page{padding:0 24px}
+  .main{grid-template-columns:300px minmax(0,1fr);gap:28px}
+  .memo{padding:28px}
+  .cols{grid-template-columns:1fr;gap:28px}
+  .learn{margin:0 -24px;padding:30px 24px}
+  .learn-in{grid-template-columns:1fr;gap:28px}
+}
+@media (max-width:820px){
+  .page{padding:0 16px}
+  .mast{flex-direction:column;align-items:flex-start;gap:14px;padding-top:20px}
+  .mast h1{font-size:38px}
+  .chips{justify-content:flex-start}
+  .main{grid-template-columns:1fr;gap:28px;padding-top:20px}
+  .memo{padding:22px 18px;margin:0 -16px}
+  .memo h2{font-size:26px}
+  .answer{padding:22px 18px}
+  .btn{flex:1 1 100%}
+  .learn{margin:0 -16px;padding:28px 16px}
+  .learn h2{font-size:48px}
+  .learn h2 small{font-size:24px}
+  .facts{grid-template-columns:1fr;gap:16px}
+  .fig{padding:14px 12px 10px}
+}
+@media (prefers-reduced-motion:reduce){.st-route i{animation:none}.btn{transition:none}}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="mast">
+  <div><h1>Dispatch</h1><p>Northfield State University · IT Service Desk</p></div>
+  <ul class="chips" aria-label="System status">
+    <li class="chip"><i class="ph-light ph-cpu" aria-hidden="true"></i>On-device model ready · Gemma in Chrome</li>
+    <li class="chip"><i class="ph-light ph-cloud" aria-hidden="true"></i>Cloud · Gemini 3.5 Flash-Lite via Firebase AI Logic</li>
+  </ul>
+</header>
+
+<div class="main">
+  <section class="queue" aria-labelledby="qh">
+    <h2 id="qh">Queue <span>8 open · 2 need review</span></h2>
+    <p class="sub">Newest first. Each ticket was routed on this computer.</p>
+    <ul>
+      <li><button class="item"><span class="l1"><time>10:14</time><span class="snip">course eval link missing for my 3 sections</span></span><span class="l2"><span class="team">lms-support?</span><span class="st st-route"><i class="ph-light ph-spinner-gap" aria-hidden="true"></i>routing…</span></span></button></li>
+      <li><button class="item"><span class="l1"><time>10:12</time><span class="snip">Duo push never arrives after I got a new phone</span></span><span class="l2"><span class="team">identity-access?</span><span class="st st-unsure"><i class="ph-light ph-question" aria-hidden="true"></i>unsure, needs review</span></span></button></li>
+      <li><button class="item" aria-current="true"><span class="l1"><time>10:09</time><span class="snip">pharos says no credit, cant release my job in the Ridgeway lab N01234567</span></span><span class="l2"><span class="team">lab-desktop-west?</span><span class="st st-unsure"><i class="ph-light ph-question" aria-hidden="true"></i>unsure, needs review</span></span></button></li>
+      <li><button class="item"><span class="l1"><time>10:06</time><span class="snip">is this email from the registrar real?</span></span><span class="l2"><span class="team">security-desk</span><span class="st"><i class="ph-light ph-cloud" aria-hidden="true"></i>checked by cloud</span></span></button></li>
+      <li><button class="item"><span class="l1"><time>10:03</time><span class="snip">desk phone has no dial tone, ext 4417</span></span><span class="l2"><span class="team">telecom</span><span class="st"><i class="ph-light ph-cpu" aria-hidden="true"></i>routed on device</span></span></button></li>
+      <li><button class="item"><span class="l1"><time>09:58</time><span class="snip">need JAWS installed for a student next week</span></span><span class="l2"><span class="team">accessibility-tech</span><span class="st"><i class="ph-light ph-cpu" aria-hidden="true"></i>routed on device</span></span></button></li>
+      <li><button class="item"><span class="l1"><time>09:55</time><span class="snip">wifi drops every 10 min in Dunmore Tower</span></span><span class="l2"><span class="team">network-ops</span><span class="st"><i class="ph-light ph-cpu" aria-hidden="true"></i>routed on device</span></span></button></li>
+      <li><button class="item"><span class="l1"><time>09:51</time><span class="snip">canvas final grades not showing in self-service banner</span></span><span class="l2"><span class="team">sis-support</span><span class="st"><i class="ph-light ph-cpu" aria-hidden="true"></i>routed on device</span></span></button></li>
+    </ul>
+  </section>
+
+  <article class="memo" aria-labelledby="mh">
+    <p class="meta"><span>Ticket 4187</span><span>Received 10:09</span><span class="st st-unsure"><i class="ph-light ph-question" aria-hidden="true"></i>unsure, needs review</span></p>
+    <h2 id="mh">pharos says no credit, cant release my job in the Ridgeway lab N01234567</h2>
+    <p class="lede">The on-device model and the most similar past tickets point to different teams, so this one needs a person to decide.</p>
+    <div class="rule" aria-hidden="true"></div>
+    <div class="cols">
+      <div>
+        <section class="block">
+          <h3>On-device answer</h3>
+          <p class="team-big"><i class="ph-light ph-cpu" aria-hidden="true"></i>lab-desktop-west</p>
+          <p class="warn"><i class="ph-light ph-warning-diamond" aria-hidden="true"></i><span>Similar past tickets say <b>print-services</b> (4 of 5). The two disagree, so Dispatch marked it unsure.</span></p>
+        </section>
+        <section class="block">
+          <h3>What leaves this computer</h3>
+          <p class="masked">pharos says no credit, cant release my job in the Ridgeway lab <mark>[STUDENT_ID]</mark></p>
+          <p class="note"><i class="ph-light ph-lock-key" aria-hidden="true"></i><span>The student ID is masked here, on your computer. Only this text goes to Gemini, and only after you approve.</span></p>
+          <div class="btns"><button class="btn pri"><i class="ph-light ph-paper-plane-tilt" aria-hidden="true"></i>Send masked text to Gemini</button><button class="btn"><i class="ph-light ph-pencil-simple" aria-hidden="true"></i>Route it myself</button></div>
+        </section>
+      </div>
+      <section class="answer" aria-labelledby="gh">
+        <h3 id="gh">Gemini's answer</h3>
+        <p class="why"><b>Print Services</b> · Pharos credit and charges are Print Services, even from a lab PC</p>
+        <p class="via"><i class="ph-light ph-cloud" aria-hidden="true"></i>Gemini 3.5 Flash-Lite via Firebase AI Logic</p>
+        <hr>
+        <p class="q">Your call</p>
+        <div class="btns"><button class="btn pri"><i class="ph-light ph-check" aria-hidden="true"></i>Confirm</button><button class="btn"><i class="ph-light ph-arrows-left-right" aria-hidden="true"></i>Change team</button></div>
+        <p class="saved"><i class="ph-light ph-check-circle" aria-hidden="true"></i>Saved as example #121 · shared with your desk</p>
+      </section>
+    </div>
+  </article>
+</div>
+
+<section class="learn" aria-labelledby="lh">
+  <div class="learn-in">
+    <div>
+      <h2 id="lh">4 in 10<small>tickets never left the browser</small></h2>
+      <p class="lead">Every confirmed ticket is saved as an example for the whole desk. The on-device model gets better, and fewer tickets need the cloud.</p>
+      <div class="facts">
+        <div><b>14, 30, 39%</b><span>kept on device at 20, 60 and 120 examples</span></div>
+        <div><b>84%</b><span>system accuracy, the same as sending every ticket to the cloud</span></div>
+        <div><b>36% → 62%</b><span>on-device accuracy, with no examples and with 120</span></div>
+      </div>
+    </div>
+    <figure class="fig">
+      <svg class="chart" viewBox="0 0 360 186" role="img" aria-labelledby="ct cd">
+<title id="ct">Share of tickets kept on device and on-device accuracy, by number of saved examples</title>
+<desc id="cd">Kept on device: 14% at 20 examples, 30% at 60, 39% at 120. On-device accuracy: 36% with no examples, 62% with 120. System accuracy is 84%, the same as sending every ticket to the cloud.</desc>
+<g class="grid"><line x1="36" x2="346" y1="14" y2="14"/><line x1="36" x2="346" y1="48" y2="48"/><line x1="36" x2="346" y1="82" y2="82"/><line x1="36" x2="346" y1="116" y2="116"/><line class="base" x1="36" x2="346" y1="150" y2="150"/></g>
+<g class="yl" text-anchor="end"><text x="31" y="17">100%</text><text x="31" y="51">75%</text><text x="31" y="85">50%</text><text x="31" y="119">25%</text><text x="31" y="153">0%</text></g>
+<g class="xl"><text x="36" y="166" text-anchor="start">0</text><text x="88" y="166" text-anchor="middle">20</text><text x="191" y="166" text-anchor="middle">60</text><text x="346" y="166" text-anchor="end">120</text><text x="191" y="181" text-anchor="middle">examples saved</text></g>
+<line class="sys" x1="36" x2="346" y1="35.8" y2="35.8"/>
+<text class="lab sysl" x="346" y="29" text-anchor="end">System accuracy 84%, same as all-cloud</text>
+<polyline class="acc" points="36,101 346,65.7"/>
+<circle class="dot acc" cx="36" cy="101" r="3.5"/><circle class="dot acc" cx="346" cy="65.7" r="3.5"/>
+<text class="lab accl" x="104" y="76">On-device accuracy</text>
+<text class="val" x="42" y="93">36%</text><text class="val" x="346" y="57" text-anchor="end">62%</text>
+<polyline class="kept" points="88,131 191,109.2 346,97"/>
+<circle class="dot kept" cx="88" cy="131" r="3.5"/><circle class="dot kept" cx="191" cy="109.2" r="3.5"/><circle class="dot kept" cx="346" cy="97" r="3.5"/>
+<text class="lab keptl" x="222" y="128">Kept on device</text>
+<text class="val" x="88" y="147" text-anchor="middle">14%</text><text class="val" x="191" y="125" text-anchor="middle">30%</text><text class="val" x="346" y="113" text-anchor="end">39%</text>
+</svg>
+      <figcaption>Measured on 80 synthetic test tickets</figcaption>
+    </figure>
+  </div>
+</section>
+</div>
+</body>
+</html>

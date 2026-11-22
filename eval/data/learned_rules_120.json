@@ -1,0 +1,66 @@
+[
+  {
+    "rule": "Requests for Zoom Webinar licenses, setup, or recordings are routed to lms-canvas.",
+    "team": "lms-canvas"
+  },
+  {
+    "rule": "Network, VPN, wifi, and ethernet connectivity issues in buildings or apartments are routed to telecom-network.",
+    "team": "telecom-network"
+  },
+  {
+    "rule": "Issues with desk phones, dial tones, voicemail lights, and office phone extensions are routed to telecom-network.",
+    "team": "telecom-network"
+  },
+  {
+    "rule": "Rosters, student enrollments, grade syncing between Canvas and Banner, and academic records are routed to registrar-systems.",
+    "team": "registrar-systems"
+  },
+  {
+    "rule": "Device registration for residence halls like Aspen, Cedar Commons, Elmhurst, Dunmore, and Birchwood is routed to resnet.",
+    "team": "resnet"
+  },
+  {
+    "rule": "Requests for high-performance computing clusters, research storage quotas, and research software licenses are routed to research-computing.",
+    "team": "research-computing"
+  },
+  {
+    "rule": "Course evaluation link or page errors are routed to research-computing.",
+    "team": "research-computing"
+  },
+  {
+    "rule": "Classroom audio-visual issues involving projectors, Panopto recordings, and podium computers in specific rooms are routed to classroom-av.",
+    "team": "classroom-av"
+  },
+  {
+    "rule": "Account authentication, password resets, Duo multi-factor authentication, and mailbox quota issues are routed to identity-access.",
+    "team": "identity-access"
+  },
+  {
+    "rule": "Financial aid portal, FAFSA codes, tuition payment plans, and aid disbursements are routed to financial-aid-systems.",
+    "team": "financial-aid-systems"
+  },
+  {
+    "rule": "Accessibility tools like CART captioning, Read&Write, ZoomText, JAWS, and alternative textbook formats are routed to accessibility-tech.",
+    "team": "accessibility-tech"
+  },
+  {
+    "rule": "Campus printing fees, Pharos charges, copy center services, poster printing, and jammed campus printers are routed to print-services.",
+    "team": "print-services"
+  },
+  {
+    "rule": "Reports of suspicious emails, phishing links, malware alerts, and compromised accounts are routed to security-phishing.",
+    "team": "security-phishing"
+  },
+  {
+    "rule": "Hardware maintenance and software installations for labs in the East zone such as Okafor, Brightwater, and Halvorsen are routed to lab-desktop-east.",
+    "team": "lab-desktop-east"
+  },
+  {
+    "rule": "Hardware maintenance and software installations for labs in the West zone such as Ridgeway, Castellanos, and Tamarack are routed to lab-desktop-west.",
+    "team": "lab-desktop-west"
+  },
+  {
+    "rule": "Requests for shared mailbox permissions, administrative form authorizations, and name changes on accounts are routed to identity-access.",
+    "team": "identity-access"
+  }
+]

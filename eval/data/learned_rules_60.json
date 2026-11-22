@@ -1,0 +1,54 @@
+[
+  {
+    "rule": "Requests regarding Zoom accounts, Zoom webinars, and Panopto lecture recordings should be routed to lms-canvas.",
+    "team": "lms-canvas"
+  },
+  {
+    "rule": "Issues with VPN access, eduroam wifi, desk phones, network drops, and globalprotect routing should be routed to telecom-network.",
+    "team": "telecom-network"
+  },
+  {
+    "rule": "Student enrollment discrepancies between Banner and Canvas should be routed to registrar-systems.",
+    "team": "registrar-systems"
+  },
+  {
+    "rule": "Device registration for gaming consoles, Chromecasts, and residence hall network issues in buildings like Aspen or Cedar Commons should be routed to resnet.",
+    "team": "resnet"
+  },
+  {
+    "rule": "High-performance computing cluster accounts, slurm jobs, and research storage quotas should be routed to research-computing.",
+    "team": "research-computing"
+  },
+  {
+    "rule": "Classroom projector, podium PC, and lecture capture hardware issues in specific room numbers should be routed to classroom-av.",
+    "team": "classroom-av"
+  },
+  {
+    "rule": "Issues with multi-factor authentication, Duo push failures, password resets, and account lockouts should be routed to identity-access.",
+    "team": "identity-access"
+  },
+  {
+    "rule": "FAFSA codes, financial aid disbursements, and eBill authorized payer errors should be routed to financial-aid-systems.",
+    "team": "financial-aid-systems"
+  },
+  {
+    "rule": "Suspicious emails regarding aid hubs or account verifications should be routed to security-phishing.",
+    "team": "security-phishing"
+  },
+  {
+    "rule": "Requests for assistive software like Read&Write, ZoomText, JAWS, or live captioning (CART) should be routed to accessibility-tech.",
+    "team": "accessibility-tech"
+  },
+  {
+    "rule": "Pharos printing fees, print charges, and printer jams in student unions or labs should be routed to print-services.",
+    "team": "print-services"
+  },
+  {
+    "rule": "Software installations in specific East zone buildings like Okafor should be routed to lab-desktop-east.",
+    "team": "lab-desktop-east"
+  },
+  {
+    "rule": "Operating system updates and software issues affecting lab PCs in West zone buildings like Ridgeway should be routed to lab-desktop-west.",
+    "team": "lab-desktop-west"
+  }
+]

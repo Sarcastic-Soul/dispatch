@@ -1,0 +1,82 @@
+[
+  {
+    "rule": "Route requests about Zoom Webinar licensing, setup, or capacity to lms-canvas.",
+    "team": "lms-canvas"
+  },
+  {
+    "rule": "Route inquiries about setting up off-campus VPN access to library databases to telecom-network.",
+    "team": "telecom-network"
+  },
+  {
+    "rule": "Route desk phone line outages, dial tone issues, and office phone connection requests to telecom-network.",
+    "team": "telecom-network"
+  },
+  {
+    "rule": "Route missing Zoom cloud recording retrieval questions to lms-canvas.",
+    "team": "lms-canvas"
+  },
+  {
+    "rule": "Route missing student roster synchronizations between Banner and Canvas to registrar-systems.",
+    "team": "registrar-systems"
+  },
+  {
+    "rule": "Route device network registration issues in residence halls such as Aspen, Cedar Commons, and Elmhurst to resnet.",
+    "team": "resnet"
+  },
+  {
+    "rule": "Route requests for accounts and access on the Granite cluster to research-computing.",
+    "team": "research-computing"
+  },
+  {
+    "rule": "Route biology or academic course evaluation loading issues to research-computing.",
+    "team": "research-computing"
+  },
+  {
+    "rule": "Route lecture capture and Panopto recording issues in classrooms to classroom-av.",
+    "team": "classroom-av"
+  },
+  {
+    "rule": "Route multi-factor authentication issues for new mobile phones accessing Canvas to identity-access.",
+    "team": "identity-access"
+  },
+  {
+    "rule": "Route password resets and account existence errors to identity-access.",
+    "team": "identity-access"
+  },
+  {
+    "rule": "Route dead ethernet jack reports in residence halls to resnet.",
+    "team": "resnet"
+  },
+  {
+    "rule": "Route missing lecture recording inquiries for specific room locations to classroom-av.",
+    "team": "classroom-av"
+  },
+  {
+    "rule": "Route vague troubleshooting requests without specific details to service-desk.",
+    "team": "service-desk"
+  },
+  {
+    "rule": "Route questions regarding the FAFSA school code for NSU to financial-aid-systems.",
+    "team": "financial-aid-systems"
+  },
+  {
+    "rule": "Route game console network registration issues in student residence rooms to resnet.",
+    "team": "resnet"
+  },
+  {
+    "rule": "Route Wi-Fi outage reports in campus public spaces like the Whitlock Student Union to telecom-network.",
+    "team": "telecom-network"
+  },
+  {
+    "rule": "Route grade syncing issues between Canvas gradebooks and Banner rosters to registrar-systems.",
+    "team": "registrar-systems"
+  },
+  {
+    "rule": "Route podium computer and projector display failures in classrooms to classroom-av.",
+    "team": "classroom-av"
+  },
+  {
+    "rule": "Route desk phone hardware indicator and voicemail light issues to telecom-network.",
+    "team": "telecom-network"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {"id": "service-desk", "name": "Service Desk Tier 1", "description": "First point of contact for general technology questions, basic troubleshooting, and requests that do not clearly belong to a specialist team."},
+  {"id": "resnet", "name": "ResNet (residence hall network)", "description": "Supports internet access and connected devices for students living in university residence halls."},
+  {"id": "classroom-av", "name": "Classroom & AV", "description": "Supports audio-visual equipment and video conferencing technology for teaching and meeting spaces."},
+  {"id": "print-services", "name": "Print Services", "description": "Manages campus printing, copying, and large-format output, along with the equipment and supplies behind them."},
+  {"id": "identity-access", "name": "Identity & Access", "description": "Manages NSU accounts, passwords, multi-factor authentication, and permissions to campus systems."},
+  {"id": "lms-canvas", "name": "LMS (Canvas)", "description": "Supports the Canvas learning management system and the teaching and assessment tools connected to it."},
+  {"id": "lab-desktop-east", "name": "Lab Desktop East", "description": "Maintains desktop computers, software images, and peripherals in public and instructional computer labs in the East zone of campus."},
+  {"id": "lab-desktop-west", "name": "Lab Desktop West", "description": "Maintains desktop computers, software images, and peripherals in public and instructional computer labs in the West zone of campus."},
+  {"id": "research-computing", "name": "Research Computing", "description": "Provides high-performance computing, research data storage, and consulting for faculty and student researchers."},
+  {"id": "registrar-systems", "name": "Registrar Systems", "description": "Supports Banner student records, registration, transcripts, and related academic records systems."},
+  {"id": "financial-aid-systems", "name": "Financial Aid Systems", "description": "Supports the online systems students use to apply for, track, and receive financial aid."},
+  {"id": "security-phishing", "name": "Security & Phishing", "description": "Handles reports of phishing and malware and advises the campus on safe computing practices."},
+  {"id": "telecom-network", "name": "Telecom & Campus Network", "description": "Operates campus telephone service, network cabling, and core network infrastructure."},
+  {"id": "accessibility-tech", "name": "Accessibility Technology", "description": "Provides assistive technology and consults on accessible digital content and learning materials."}
+]
